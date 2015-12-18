@@ -43,7 +43,39 @@
 ` $ git push -u origin master `		// 首次推送master分支所有内容  
 
 	***注：从远程服务器Clone仓库至本地，命令如下：***  
-	` git clone git@server-name:path/repo-name.git `  
+` git clone git@server-name:path/repo-name.git `  
+
+## 三、分支管理
+1. 创建分支
+` $ git branch branch-name `	// 创建分支branch-name  
+
+2. 切换分支
+` $ git checkout branch-name `	// 切换至分支branch-name  
+
+3. 查看分支
+` $ git branch `	// 会列出所有分支，带*号的为当前分支  
+
+4. 合并分支
+` $ git merge branch-name`	// 合并指定分支到当前分支  
+
+5. 删除分支
+` $git brance -d branch-name `	// 删除指定分支  
+
+	***注意：步骤1. 2. 可由一句命令完成：  
+` $ git checkout -b branch-name `	// 创建分支branch-name，并切换至该分支***  
+	
+## 解决冲突
+1. 解决冲突后，再次使用`add`、`commit`进行提交操作。  
+
+	*** 注：使用如下命令可以查看分支合并情况：  
+	` $ git log --graph --pretty=oneline --abbrev-commit `  
+	
+2. 合并分支时禁用`Fast forward`模式：  
+` $ git merge --no-ff -m "merge with no-ff" branch-name `	// 禁用`Fast forward`模式合并分支时，必定会创建一个新的commit，所以加上`-m`参数，写入commit描述  
+
+	***注：分支策略：master分支仅用于发布版本，平时在dev分支上进行开发。团队开发时，每个人都往dev分支上合并代码，发布版本时才将dev分支往master分支上合并***  
+
+
 
 
 
