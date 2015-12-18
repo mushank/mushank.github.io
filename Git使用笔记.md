@@ -1,5 +1,5 @@
-
-
+# Git使用笔记
+## 一、本地仓库
 1. 创建Git仓库  
 ` $ mkdir learnGit `	// 创建目录  
 ` $ cd learnGit `  
@@ -30,6 +30,20 @@
 ` $ rm fileName `	// 从系统文件管理器删除文件  
 ` $ git rm fileName `	// 从Git版本库中删除文件  
 
+## 二、远程仓库
+1. 创建SSH Key  
+` $ ssh-keygen -t rsa -c 'example@email.com' `	// 如果用户主目录下已有.ssh目录，并且.ssh目录下已包含id_rsa和id_rsa.pub两个文件，则跳过创建此步骤  
+
+2. 登录GitHub，'Account settings' -> 'SSH Keys' -> 'Add SSH Key',复制id_rsa.pub文件内容添加新的SSH Key  
+
+3. 在GitHub创建一个Git仓库  
+
+4. 关联远程GitHub仓库
+` $ git remote add origin git@server-name:path/repo-name.git `	// 关联远程库  
+` $ git push -u origin master `		// 首次推送master分支所有内容  
+
+	***注：从远程服务器Clone仓库至本地，命令如下：***  
+	` git clone git@server-name:path/repo-name.git `  
 
 
 
