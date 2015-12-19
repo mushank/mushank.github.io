@@ -107,6 +107,25 @@
 9. 抓去分支最新内容  
 ` $ git pull `  
 
+## 四、标签管理
+1. 添加标签  
+` $ git tag tag-name `	// 给当前commit添加标签  
+` $ git tag tag-name commit-id `	// 给指定commit添加标签  
+` $ git tag -a tag-name -m "explanation" commit-id `	// `-a`指定标签名字，`-m`指定说明文字  
+2. 查看标签  
+` $ git tag `	// 查看所有标签  
+` $ git show tag-name `	// 查看指定标签详细信息  
+
+3. 删除标签  
+` $ git tag -d tag-name `  
+` $ git push origin :refs/tags/tag-name `	// 删除远程仓库标签（首先从本地删除标签，然后再运行此命令）  
+
+4. 推送标签  
+` $ git push origin tag-name `	// 推送标签至远程仓库  
+` $ git push origin --tags `	// 推送全部尚未推送的标签至远程仓库  
+
+
+
 
 
 
