@@ -30,22 +30,7 @@
 ` $ rm fileName `	// 从系统文件管理器删除文件  
 ` $ git rm fileName `	// 从Git版本库中删除文件  
 
-## 二、远程仓库
-1. 创建SSH Key  
-` $ ssh-keygen -t rsa -c 'example@email.com' `	// 如果用户主目录下已有.ssh目录，并且.ssh目录下已包含id_rsa和id_rsa.pub两个文件，则跳过创建此步骤  
-
-2. 登录GitHub，'Account settings' -> 'SSH Keys' -> 'Add SSH Key',复制id_rsa.pub文件内容添加新的SSH Key  
-
-3. 在GitHub创建一个Git仓库  
-
-4. 关联远程GitHub仓库
-` $ git remote add origin git@server-name:path/repo-name.git `	// 关联远程库  
-` $ git push -u origin master `		// 首次推送master分支所有内容  
-
-	***注：从远程服务器Clone仓库至本地，命令如下：***  
-` git clone git@server-name:path/repo-name.git `  
-
-## 三、分支管理
+## 二、分支管理
 1. 创建分支
 ` $ git branch branch-name `	// 创建分支branch-name  
 
@@ -59,12 +44,12 @@
 ` $ git merge branch-name`	// 合并指定分支到当前分支  
 
 5. 删除分支
-` $git brance -d branch-name `	// 删除指定分支  
-
+` $ git brance -d branch-name `	// 删除指定分支  
+` $ git branch -D branch-name `	// 强行删除指定分支
 	***注意：步骤1. 2. 可由一句命令完成：  
 ` $ git checkout -b branch-name `	// 创建分支branch-name，并切换至该分支***  
-	
-## 解决冲突
+
+### 解决冲突
 1. 解决冲突后，再次使用`add`、`commit`进行提交操作。  
 
 	*** 注：使用如下命令可以查看分支合并情况：  
@@ -74,6 +59,63 @@
 ` $ git merge --no-ff -m "merge with no-ff" branch-name `	// 禁用`Fast forward`模式合并分支时，必定会创建一个新的commit，所以加上`-m`参数，写入commit描述  
 
 	***注：分支策略：master分支仅用于发布版本，平时在dev分支上进行开发。团队开发时，每个人都往dev分支上合并代码，发布版本时才将dev分支往master分支上合并***  
+
+### BUG分支
+1. 储藏现场  
+` $ git stash `  
+
+2. 查看现场  
+` $ git stash list `  
+
+3. 恢复现场  
+` $ git stash apply stash@{0} `	// 恢复指定stash，恢复后，stash内容并不删除  
+
+4. 删除现场  
+` $ git stash drop `	// 删除stash内容  
+
+	***注：步骤3. 4. 可由一句命令完成：  
+`$ git stash pop `	//恢复现场，同时删除现场***  
+
+## 三、远程仓库
+1. 创建SSH Key  
+` $ ssh-keygen -t rsa -c 'example@email.com' `	// 如果用户主目录下已有.ssh目录，并且.ssh目录下已包含id_rsa和id_rsa.pub两个文件，则跳过创建此步骤  
+
+2. 登录GitHub，'Account settings' -> 'SSH Keys' -> 'Add SSH Key',复制id_rsa.pub文件内容添加新的SSH Key  
+
+3. 在GitHub创建一个Git仓库  
+
+4. 关联远程GitHub仓库
+` $ git remote add origin git@server-name:path/repo-name.git `	// 关联远程库  
+` $ git push -u origin master `		// 首次推送master分支所有内容  
+
+5. 查看远程仓库信息  
+` $ git remote `	// 查看远程仓库信息  
+` $ git remote -v `	// 查看远程仓库详细信息
+
+	***注：从远程服务器Clone仓库至本地，命令如下：***  
+` git clone git@server-name:path/repo-name.git `	// 默认只clone Master分支  
+
+6. 推送本地分支
+` $ git push origin branch-name `	
+
+7. 抓取分支
+` $ git checkout -b branch-name origin/branch-name `	// 从远程仓库拉取barnch-name分支  
+
+8. 指定本地分支和远程分支的链接  
+` $ git branch --set-upstream branch-name origin/branch-name `  
+
+9. 抓去分支最新内容  
+` $ git pull `  
+
+
+
+
+
+
+
+
+
+
 
 
 
