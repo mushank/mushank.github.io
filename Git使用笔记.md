@@ -125,6 +125,22 @@
 ` $ git push origin --tags `	// 推送全部尚未推送的标签至远程仓库  
 
 
+## 五、自定义Git
+1. 让Git显示颜色  
+` $ git config --global color.ui true `  
+
+2. 配置别名  
+` $ git config --global alias.custom-name order-name `	// 设置命令order-name的别名custom-name  
+	**举例：**  
+` $ git config --global alias.cho checkout `  
+` $ git config --global alias.co commit `  
+` $ git config --global alias.br branch `  
+` $ git config --global alias.unstage 'reset HEAD' `  
+` $ git config --global alias.last 'log -1' `  
+` $ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit" `  
+***注1：配置Git的时候，加上`--global`是针对当前用户起作用的;如果不加，则只针对当前仓库起作用***  
+***注2：每个仓库的Git配置文件都放在.git/config文件中.  
+当前用户的Git配置文件放在用户主目录下的一个隐藏文件.gitconfig中***  
 
 
 
