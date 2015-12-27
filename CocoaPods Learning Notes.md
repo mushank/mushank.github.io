@@ -47,16 +47,16 @@
    * 多个Target使用相同Pods依赖库，可通过使用` link_with `关键字实现，在Podfile文件首行添加如下内容：  
    ` link_with 'Target_1', 'Target_2' `  
    * 不同Target使用不同Pods依赖库，此时可通过使用` target `关键字实现，Podfile文件描述如下(其中do/end作为开始和结束的标识符)：     
->	target :'Target_1' do  
-	platform :ios  
-	pod 'AFNetworking', '~> 2.6.0'  
-	pod 'Reachability', '~> 3.2'  
-	platform :ios, '7.0'  
-	pod 'SDWebImage', '~> 3.7.3'  
-	end  
-	target :'Target_2' do  
-	pod 'Masonry', '~> 0.6.3'  
-	end  
+	>	target :'Target_1' do  
+		platform :ios  
+		pod 'AFNetworking', '~> 2.6.0'  
+		pod 'Reachability', '~> 3.2'  
+		platform :ios, '7.0'  
+		pod 'SDWebImage', '~> 3.7.3'  
+		end  
+		target :'Target_2' do  
+		pod 'Masonry', '~> 0.6.3'  
+		end  
 
 3. Podfile中指定依赖库版本，具体写法和标识含义如下：  
 >	pod 'AFNetworking'	//不显式指定依赖库版本，表示每次都获取最新版本  

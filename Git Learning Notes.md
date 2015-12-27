@@ -1,15 +1,15 @@
 # Git学习笔记
 ## 一、本地仓库
 1. 创建Git仓库  
-` $ mkdir learnGit `	// 创建目录  
-` $ cd learnGit `  
+` $ mkdir gitDirectory `	// 创建目录  
+` $ cd gitDirectory `  
 ` $ pwd `	// 查看当前所在目录  
 ` $ git init `	// 初始化仓库  
 ` $ ls -ah `	// 查看当前目录所含文件
 
 2. 添加文件到版本库  
 ` $ git add fileName `	// 提交文件至Git暂存区  
-` $ git commit -m 'wrote a fileName file' `	// 提交暂存区文件至Git版本库，`-m`后输入的是本次提交的的说明  
+` $ git commit -m 'wrote a file' `	// 提交暂存区文件至Git版本库，`-m`后输入的是本次提交的的说明  
 
 3. 查看命令  
 ` $ git status `	// 查看Git仓库当前状态  
@@ -19,7 +19,7 @@
 ` $ git reflog ` // 查看历史日志  
 
 4. 版本回退
-` $ git reset --hard commit_id `	// reset回退命令，可以回退到任一提交版本  
+` $ git reset --hard commitId `	// reset回退命令，可以回退到任一提交版本  
 ` $ git reset --hard HEAD^ `	// HEAD表示当前版本，HEAD^标识上一个版本，HEAD^^表示上上个版本，HEAD~100表示往前100个版本  
 
 5. 撤销修改
@@ -32,22 +32,22 @@
 
 ## 二、分支管理
 1. 创建分支
-` $ git branch branch-name `	// 创建分支branch-name  
+` $ git branch branchName `	// 创建分支branchName  
 
 2. 切换分支
-` $ git checkout branch-name `	// 切换至分支branch-name  
+` $ git checkout branchName `	// 切换至分支branchName  
 
 3. 查看分支
 ` $ git branch `	// 会列出所有分支，带*号的为当前分支  
 
 4. 合并分支
-` $ git merge branch-name`	// 合并指定分支到当前分支  
+` $ git merge branchName`	// 合并指定分支到当前分支  
 
 5. 删除分支
-` $ git brance -d branch-name `	// 删除指定分支  
-` $ git branch -D branch-name `	// 强行删除指定分支
+` $ git brance -d branchName `	// 删除指定分支  
+` $ git branch -D branchName `	// 强行删除指定分支  
 	***注意：步骤1. 2. 可由一句命令完成：  
-` $ git checkout -b branch-name `	// 创建分支branch-name，并切换至该分支***  
+` $ git checkout -b branchName `	// 创建分支branchName，并切换至该分支***  
 
 ### 解决冲突
 1. 解决冲突后，再次使用`add`、`commit`进行提交操作。  
@@ -56,7 +56,7 @@
 	` $ git log --graph --pretty=oneline --abbrev-commit `  
 	
 2. 合并分支时禁用`Fast forward`模式：  
-` $ git merge --no-ff -m "merge with no-ff" branch-name `	// 禁用`Fast forward`模式合并分支时，必定会创建一个新的commit，所以加上`-m`参数，写入commit描述  
+` $ git merge --no-ff -m "merge with no-ff" branchName `	// 禁用`Fast forward`模式合并分支时，必定会创建一个新的commit，所以加上`-m`参数，写入commit描述  
 
 	***注：分支策略：master分支仅用于发布版本，平时在dev分支上进行开发。团队开发时，每个人都往dev分支上合并代码，发布版本时才将dev分支往master分支上合并***  
 
@@ -85,7 +85,7 @@
 3. 在GitHub创建一个Git仓库  
 
 4. 关联远程GitHub仓库
-` $ git remote add origin git@server-name:path/repo-name.git `	// 关联远程库  
+` $ git remote add origin git@serverName:path/repoName.git `	// 关联远程库  
 ` $ git push -u origin master `		// 首次推送master分支所有内容  
 
 5. 查看远程仓库信息  
@@ -93,35 +93,35 @@
 ` $ git remote -v `	// 查看远程仓库详细信息
 
 	***注：从远程服务器Clone仓库至本地，命令如下：***  
-` git clone git@server-name:path/repo-name.git `	// 默认只clone Master分支  
+` git clone git@serverName:path/repoName.git `	// 默认只clone Master分支  
 
 6. 推送本地分支
-` $ git push origin branch-name `	
+` $ git push origin branchName `	
 
 7. 抓取分支
-` $ git checkout -b branch-name origin/branch-name `	// 从远程仓库拉取barnch-name分支  
+` $ git checkout -b branchName origin/branchName `	// 从远程仓库拉取branchName分支  
 
 8. 指定本地分支和远程分支的链接  
-` $ git branch --set-upstream branch-name origin/branch-name `  
+` $ git branch --set-upstream branchName origin/branchName `  
 
 9. 抓去分支最新内容  
 ` $ git pull `  
 
 ## 四、标签管理
 1. 添加标签  
-` $ git tag tag-name `	// 给当前commit添加标签  
-` $ git tag tag-name commit-id `	// 给指定commit添加标签  
-` $ git tag -a tag-name -m "explanation" commit-id `	// `-a`指定标签名字，`-m`指定说明文字  
+` $ git tag tagName `	// 给当前commit添加标签  
+` $ git tag tagName commitId `	// 给指定commit添加标签  
+` $ git tag -a tagName -m "remark" commitId `	// `-a`指定标签名字，`-m`指定说明文字  
 2. 查看标签  
 ` $ git tag `	// 查看所有标签  
-` $ git show tag-name `	// 查看指定标签详细信息  
+` $ git show tagName `	// 查看指定标签详细信息  
 
 3. 删除标签  
-` $ git tag -d tag-name `  
-` $ git push origin :refs/tags/tag-name `	// 删除远程仓库标签（首先从本地删除标签，然后再运行此命令）  
+` $ git tag -d tagName `  
+` $ git push origin :refs/tags/tagName `	// 删除远程仓库标签（首先从本地删除标签，然后再运行此命令）  
 
 4. 推送标签  
-` $ git push origin tag-name `	// 推送标签至远程仓库  
+` $ git push origin tagName `	// 推送标签至远程仓库  
 ` $ git push origin --tags `	// 推送全部尚未推送的标签至远程仓库  
 
 
@@ -130,7 +130,7 @@
 ` $ git config --global color.ui true `  
 
 2. 配置别名  
-` $ git config --global alias.custom-name order-name `	// 设置命令order-name的别名custom-name  
+` $ git config --global alias.customName orderName `	// 设置命令order-name的别名custom-name  
 	**举例：**  
 ` $ git config --global alias.cho checkout `  
 ` $ git config --global alias.co commit `  
