@@ -1,2 +1,2 @@
-# mushank.github.io
-A personal page
+# Notes
+Learning Notes
