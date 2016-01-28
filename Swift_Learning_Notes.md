@@ -185,8 +185,9 @@ if d.isSignMinus{
 	d = Double.abs(d)
 }
 ```
-- `isSignMiuns` is an instance property of a Double (you send it to a particular Double)  
-- `abs` is a type method of Double (you send it to the type itself, not to a particular Double)
+
+*`isSignMiuns` is an instance property of a Double (you send it to a particular Double)*  
+*`abs` is a type method of Double (you send it to the type itself, not to a particular Double)*  
 
 - ***Declare a type method or a property by using `static` in front of it：***  
 
@@ -195,20 +196,91 @@ static func ads(d:Double) -> Double
 ```
 - ***In a class you use the word `class` not `static`, called a class function***
 
+### Parameters Names
+- **All parameters to all functions have an `internal name` and `an external name`**
+- **The `internal name` is the name of the local variable you use inside the method**
+- **The `external name` is what callers will use to call the method**
 
+``` 
+// Both with external name and internal name
+func foo(external internal: Int){
+	let local = internal
+}
 
+func bar(){
+	let result = foo(external:123)
+}
+```
+- **You can put `_` if you don't want callers to use an external name at all for a given parameter	// That is the default for the first argument to a function**
 
+```
+// With under bar thing for enternal name
+func foo(_ internal: Int){
+	let local = internal
+}
 
+func bar(){
+	let result = foo(123)
+}
+```
+```
+// Under bar thing is the default for the first argument
+func foo(internal: Int){
+	let local = internal
+}
 
+func bar(){
+	let result = foo(123)
+}
+```
 
+- **You can force the first parameter's external name to be the internal name with `#`**
 
+```
+// Force the first parameter's external name to be the internal name with `#`
+func foo(#internal: Int){
+	let local = internal
+}
 
+func bar(){
+	let result = foo(internal: 123)
+}
+```
 
+- **For other (not the first) parameters, the internal name is, by default, the external name
 
+```
+func foo(first: Int, second: Double){
+	let local = internal
+}
 
+func bar(){
+	let result = foo(123, second: 5.5)
+}
+```
+- **Any parameter's external name can be changed**
 
+```
+func foo(first: Int, externalSecond second: Double){
+	let local = internal
+}
 
+func bar(){
+	let result = foo(123, externalSecond: 5.5)
+}
+```
 
+- **Or even omitted (though this would be sort of "anti-Swift")**
+
+```
+func foo(first: Int, _ second: Double){
+	let local = internal
+}
+
+func bar(){
+	let result = foo(123, 5.5)
+}
+```
 
 
 
