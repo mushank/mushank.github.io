@@ -149,8 +149,23 @@ init(argument1:Type, argument2:Type, ...){
 3.Value type (struct, enum) vs. Reference type (class)	// 值类型(拷贝变量) 与 引用类型（传递指针）  
 ***堆内存中的对象，系统会自动为我们管理内存（ARC）***
 
+## Value vs. Reference
+- **Value (struct and enum)**
+1. Copied when passed as an argument to a function
+2. Copied when assigned to a different variable
+3. Immutable if assigned to a variable with let
+4. Remember that function parameters are, by default, constants
+5. You can put the keyword "var" on an parameter, and it will be mutable, but it's still a copy
+6. You must note any func that can mutate a struct/enum with the keyword "mutating"
 
+- **Reference (class)**
+1. Stored in the heap and reference counted (automatically)
+2. Constant pointers to a class(let) still can mutate by calling methods and changing properties
+3. When passed as an argument, does not make a copy (just passing a pointer to same instance)
 
+- **Choosing which to use**
+1. Usually you will choose class over struct. struct tends to be more for fundamental types.
+2. Use of enum is situational (any time you have a type of data with discrete values)
 
 
 
