@@ -151,21 +151,55 @@ init(argument1:Type, argument2:Type, ...){
 
 ## Value vs. Reference
 - **Value (struct and enum)**
-1. Copied when passed as an argument to a function
-2. Copied when assigned to a different variable
-3. Immutable if assigned to a variable with let
-4. Remember that function parameters are, by default, constants
-5. You can put the keyword "var" on an parameter, and it will be mutable, but it's still a copy
-6. You must note any func that can mutate a struct/enum with the keyword "mutating"
+
+	1. Copied when passed as an argument to a function
+	2. Copied when assigned to a different variable
+	3. Immutable if assigned to a variable with let
+	4. Remember that function parameters are, by default, constants
+	5. You can put the keyword `var` on an parameter, and it will be mutable, but it's still a copy
+	6. You must note any func that can mutate a struct/enum with the keyword `mutating`
 
 - **Reference (class)**
-1. Stored in the heap and reference counted (automatically)
-2. Constant pointers to a class(let) still can mutate by calling methods and changing properties
-3. When passed as an argument, does not make a copy (just passing a pointer to same instance)
+	1. Stored in the heap and reference counted (automatically)
+	2. Constant pointers to a class(let) still can mutate by calling methods and changing properties
+	3. When passed as an argument, does not make a copy (just passing a pointer to same instance)
 
 - **Choosing which to use**
-1. Usually you will choose class over struct. struct tends to be more for fundamental types.
-2. Use of enum is situational (any time you have a type of data with discrete values)
+	1. Usually you will choose class over struct. struct tends to be more for fundamental types.
+	2. Use of enum is situational (any time you have a type of data with discrete values)
+
+## Method
+- **Obviously you can override methods/properties in your superclass**
+
+	1. Precede your func or var with the keywork `override`
+	2. A method can be marked `final` which will prevent subclasses from being able to override
+	3. Classes can alse be marked final
+
+- **Both types and instances can have methods/properties**
+
+	1. For this example, lets consider the struct Double (yes, Double is a struct)
+
+```
+var d:Double = ...
+if d.isSignMinus{
+	d = Double.abs(d)
+}
+```
+- `isSignMiuns` is an instance property of a Double (you send it to a particular Double)  
+- `abs` is a type method of Double (you send it to the type itself, not to a particular Double)
+
+- ***Declare a type method or a property by using `static` in front of it：***  
+
+```
+static func ads(d:Double) -> Double
+```
+- ***In a class you use the word `class` not `static`, called a class function***
+
+
+
+
+
+
 
 
 
