@@ -282,6 +282,95 @@ func bar(){
 }
 ```
 
+## Properties
+
+### Property Observers
+
+- **You can observe changes to any property with `willSet` and `didSet`**
+
+```
+var someStoredProperty: Int = 42 {
+	willSet {newValue is the new Value}
+	didSet {oldValue is the old value}
+}
+
+override var inheritedProperty {
+	willSet {newValue is the new value}
+	didSet {oldValue is the old value}
+}
+```
+- **One very common thing to do in an observer in a Controller is to update the user-interface**
+
+### Lazy Initialization
+1. A lazy property does not get initialized until someone accesses it**  
+2. You can allocate an object, execute a closure, or call a method if you want
+
+```
+lazy var brain = CalculatorBrain()	// nice if CalclatorBrain used lots of esources
+
+lazy var someProperty: Type = {
+	// construct the value of someProperty here
+	return <the constructed value>
+}()
+
+lazy var myProperty = self.initializeMyProperty()
+```
+- **This still satisfies the "you must initialize all of your properties" rule**
+- **Unfortunately, things initialized this way can't be constants (i.e., `var` ok, `let` not okay)**  
+*Only vars can be lazily initialized*  
+*If you had constants in your class, those would have to be initializing in your initializer*
+- **This can be used to get around some initialization dependency conundrums**
+
+## Initialization
+
+- **When is an init method needed?**  
+	- init methods are not so common because properties can have their defaults set using `=`
+	- Or properties might be Optionals, in which case they start out `nil`
+	- You can also initialize a property by executing a closeure
+	-  Or use lazy instantiation
+	- So you only need init when a value can't be set in any of these ways
+	
+- **You also get some "free" init methods**
+	- If all properties in a base class (no superclass) have defaults, you get `init()` for free
+	- If a `struct` has no initializers, it will get a default one with all properties as arguments
+	
+	```
+	struct MyStruct {
+		var x: Int = 42
+		var y: String = "moltuae"
+		
+		init(x: Int, y: String)	// comes for free
+	}
+	```
+	
+- **What can you do inside an init?**
+	- You can set any prperty's value, even those with default values
+	- Constant prperties (i.e. properties declared with `let`)can be set
+	- You can call other init methods in your own class using `self.init(<args>)`
+	- In a class, you can of course also call `super.init(<args>)`
+	- But there are some rules for calling inits from inits in a `class` ...
+
+- **What are you required to do inside init?**
+	- By the time any init is done, all properties must have values (optionals can have the value nil)
+	- There are two types of inits in a `class`, `convenience` and `designated` (i.e. not convenience)
+
+	- ***Rules for designated init***
+		1. `A designated init must (and can only) call a designated init that is in its immediate superclass`
+		2. `You must initialize all properties introduced by your class before calling a superclass's init`
+		3. `You must call a superclass's init before you assign a value to an inherited property`
+		
+	- ***Rules for convenience init***
+		1. `A convenience init must (and can only) call a designated init in its own class`
+		2. `A convenience init may call a designated init indirectly (through another convenience init)`
+		3. `A convenience init must call a designated init before it can set any property values`
+	
+		**The calling of other inits must be complete before you can access properties or invoke methods**
+
+
+
+
+
+
 
 
 
