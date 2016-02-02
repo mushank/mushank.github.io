@@ -142,7 +142,11 @@
 ***注2：每个仓库的Git配置文件都放在.git/config文件中.  
 当前用户的Git配置文件放在用户主目录下的一个隐藏文件.gitconfig中***  
 
-
+## 六、Rebase
+1. ` git rebase -i commitId `	// commitId为需要修改的commit的前一个commit的Id
+2. ` git commit --amend `	// 进入VIM修改Commit信息
+3. ` git rebase --continue `	// 修改完Commit Msg，继续操作命令
+4. ` gir rebase --abort `	// 放弃本次rebase操作
 
 
 
