@@ -149,6 +149,19 @@
 4. ` gir rebase --abort `	// 放弃本次rebase操作
 
 
+## 七、Setting
+- 系统级别Git配置文件：`/etc/gitconfig`
+- 用户级别Git配置文件：`~/.gitconfig`
+- 项目级别Git配置文件：`<Project Path>/.git/config`
+
+1. `git config --global user.name "Jack"`	// 设置Git提交显示用户名
+2. `git config --global user.email "jack@emai.com""`	// 设置Git提交显示邮箱  
+***使用`--global`选项，更改的是用户级别配置，去掉`--global`选项更改的是项目级别配置***
+
+
+
+
+
 
 
 
