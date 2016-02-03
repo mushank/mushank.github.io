@@ -378,7 +378,7 @@ lazy var myProperty = self.initializeMyProperty()
 	1. A class can mark one or more of its init methods as `required`
 	2. Any subclass must implement said init methods (though they can be inherited per above rules)
 	
-- **Faulable init**
+- **Failable init**
 	- If an init is declared with a ? (or !)after the word init, it returns an `Optional`
 	
 	```
@@ -414,8 +414,6 @@ lazy var myProperty = self.initializeMyProperty()
 	`let commaSeparatedArrayElements: String = ",".join(myArray)  
 	
 	
-
-
 
 
 
