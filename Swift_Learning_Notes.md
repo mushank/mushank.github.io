@@ -363,9 +363,57 @@ lazy var myProperty = self.initializeMyProperty()
 		1. `A convenience init must (and can only) call a designated init in its own class`
 		2. `A convenience init may call a designated init indirectly (through another convenience init)`
 		3. `A convenience init must call a designated init before it can set any property values`
-	
+		
 		**The calling of other inits must be complete before you can access properties or invoke methods**
+		
+> **Question:**"What's the differences between `designated init` and `convenience init`"  
+> **Maybe Answer is:**"You do not have to provide convenience initializers if your class does not require them. Create convenience initializers whenever a shortcut to a common initialization pattern will save time or make initialization of the class clearer in intent."
+		
+- **Inheriting init**
+	1. If you do not implement any designated inits, you'll inherit all of your superclass's designateds
+	2. If you override all of your superclass's designated inits, you'll inherit all it's convenience inits
+	3. If you implement no inits, you'll inherit all of your superclass's inits
 
+- **Required init**
+	1. A class can mark one or more of its init methods as `required`
+	2. Any subclass must implement said init methods (though they can be inherited per above rules)
+	
+- **Faulable init**
+	- If an init is declared with a ? (or !)after the word init, it returns an `Optional`
+	
+	```
+	init?(arg1:Type1, ...){
+		// might return nil in here
+	}
+	```
+	*These are rare.*  
+	*Note: The documentation does not seem to properly show these inits!*  
+	*But you'll be able to tell because the compiler will warn you about the type when you access it*  
+	
+	```
+	let image = UIImage(named:"foo")	// image is an Optional UIImage (i.e. UIImage?)
+	// Usually we would use if-let for these cases ...
+	if let image = UIImage(named:"foo"){
+		// image was successfully created
+	}else{
+		// couldn't create the image
+	}
+	```
+	
+- **Create Objects**
+	Usually you create an object by calling it's initializer via the type name ...  
+	
+	```
+	let x = CalculatorBrain()
+	let y = ComplicatedObject(arg1: 42, arg2: "hello", ...)
+	let z = [String]()
+	```
+	But sometimes you create objects by calling type methods in classes ...  
+	`let button = UIButton.buttonWithType(UIButtonType.System)`  
+	Or obviously sometimes other objects will create objects for you ...
+	`let commaSeparatedArrayElements: String = ",".join(myArray)  
+	
+	
 
 
 
