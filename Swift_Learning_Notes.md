@@ -410,10 +410,67 @@ lazy var myProperty = self.initializeMyProperty()
 	```
 	But sometimes you create objects by calling type methods in classes ...  
 	`let button = UIButton.buttonWithType(UIButtonType.System)`  
-	Or obviously sometimes other objects will create objects for you ...
-	`let commaSeparatedArrayElements: String = ",".join(myArray)  
+	Or obviously sometimes other objects will create objects for you ...  
+	`let commaSeparatedArrayElements: String = ",".join(myArray)`  
 	
 	
+## AnyObject
+
+- **Special "Type" (actually it's a Protocol)**
+	- Used primarily for compatibility with existing Objective-C-based APIs
+	
+- **Where will you see it?**
+	1. As properties (either singularly or as an array of them), e.g. ...
+	`var destinationViewController: AnyObject`  
+	`var toolbarItems: [AnyObject]`  
+	
+	2. or as arguments to functions ...  
+	`func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject)`  
+	`func addConstraints(constraints: [AnyObject])`  
+	`func appendDigit(sender: AnyObject)`  
+
+	3. or even as return types from functions ...  
+	`class func buttonWithType(buttonType: UIButtonType) -> AnyObject`
+
+
+- **How do we use AnyObject?**
+	- we don't usually use it directly
+	- Instead, we convert it to anouter, known type
+	
+- **How do we convert it?**
+	- We need to create a new variable which is of a known object type (i.e. not AnyObject)
+	- Then we assign this new variable to hold the thing that is AnyObject
+	- Of course, that new variable has to be of a compatible type
+	- If we try to force the AnyObject into something incompatible, crash!
+	- But there are ways to check compatibilit y (either before forcing or while forcing)
+	
+- **Casting AnyObject**
+	- We "force" an AnyObject to be something else by "casting" it using the `as` keyword ...  
+	
+		Let's use `var destinationViewController: AnyObject` as an example ...  
+		`let calcVC = destinationViewController as CalculatorViewController`  
+		... this would crash if "dvc"" was not, in fact, a CalculatorViewController (or subclass thereof)  
+	
+		To protect against a crash, we can use `if let` with `as?` ...  
+		`if let calcVC = destinationViewController as? CalculatorViewController { ... }`  
+		... `as?` returns an `Optional` (calcVC = nil if dvc was not a CalculatorViewController)  
+		
+		Or we can check before we even try to do as with the `is` keyword
+		`if destinationViewController is CalculatorViewController { ... }`
+	
+	
+- **Casting Arrays of AnyObject**
+
+	If you're dealing with an [AnyObject], you can cast the elements or the entire array ...  
+	
+	Let's use `var toolbarItems: [AnyObjects]` as an example  
+	
+	
+	
+
+	
+
+
 
 
 
