@@ -463,7 +463,7 @@ lazy var myProperty = self.initializeMyProperty()
 
 	If you're dealing with an [AnyObject], you can cast the elements or the entire array ...  
 	
-	Let's use `var toolbarItems: [AnyObjects]` as an example  
+	Let's use `var toolbarItems: [AnyObjects]` as an example 
 	
 	
 	

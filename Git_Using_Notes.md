@@ -46,6 +46,7 @@
 5. 删除分支
 ` $ git brance -d branchName `	// 删除指定分支  
 ` $ git branch -D branchName `	// 强行删除指定分支  
+` $ $ git push origin --delete branchName `	// 删除远程仓库指定分支  
 	***注意：步骤1. 2. 可由一句命令完成：  
 ` $ git checkout -b branchName `	// 创建分支branchName，并切换至该分支***  
 
@@ -159,7 +160,8 @@
 ***使用`--global`选项，更改的是用户级别配置，去掉`--global`选项更改的是项目级别配置***
 
 
-
+## 八、Others
+1. `find . -name ".git" | xargs rm -Rf`	// 删除Git仓库信息
 
 
 
