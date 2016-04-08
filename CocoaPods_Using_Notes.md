@@ -1,4 +1,4 @@
-# CocoaPods Usage
+# CocoaPods Using Notes
 
 ## 1. Install
 

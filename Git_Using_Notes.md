@@ -1,5 +1,5 @@
-# Git学习笔记
-## 一、本地仓库
+# Git Using Notes
+## 1. Local Repo
 1. 创建Git仓库  
 ` $ mkdir gitDirectory `	// 创建目录  
 ` $ cd gitDirectory `  
@@ -10,6 +10,7 @@
 2. 添加文件到版本库  
 ` $ git add fileName `	// 提交文件至Git暂存区  
 ` $ git commit -m 'wrote a file' `	// 提交暂存区文件至Git版本库，`-m`后输入的是本次提交的的说明  
+` $ git rm --cached fileName `	//  取消对某文件的追踪
 
 3. 查看命令  
 ` $ git status `	// 查看Git仓库当前状态  
@@ -30,7 +31,7 @@
 ` $ rm fileName `	// 从系统文件管理器删除文件  
 ` $ git rm fileName `	// 从Git版本库中删除文件  
 
-## 二、分支管理
+## 2. Branch
 1. 创建分支
 ` $ git branch branchName `	// 创建分支branchName  
 
@@ -50,7 +51,7 @@
 	***注意：步骤1. 2. 可由一句命令完成：  
 ` $ git checkout -b branchName `	// 创建分支branchName，并切换至该分支***  
 
-### 解决冲突
+### 2.1 Deal with conflicts
 1. 解决冲突后，再次使用`add`、`commit`进行提交操作。  
 
 	*** 注：使用如下命令可以查看分支合并情况：  
@@ -61,7 +62,7 @@
 
 	***注：分支策略：master分支仅用于发布版本，平时在dev分支上进行开发。团队开发时，每个人都往dev分支上合并代码，发布版本时才将dev分支往master分支上合并***  
 
-### BUG分支
+### 2.2 Bug branch
 1. 储藏现场  
 ` $ git stash `  
 
@@ -77,7 +78,7 @@
 	***注：步骤3. 4. 可由一句命令完成：  
 `$ git stash pop `	//恢复现场，同时删除现场***  
 
-## 三、远程仓库
+## 3. Remote Repo
 1. 创建SSH Key  
 ` $ ssh-keygen -t rsa -c 'example@email.com' `	// 如果用户主目录下已有.ssh目录，并且.ssh目录下已包含id_rsa和id_rsa.pub两个文件，则跳过创建此步骤  
 
@@ -108,7 +109,7 @@
 9. 抓去分支最新内容  
 ` $ git pull `  
 
-## 四、标签管理
+## 4. Tags
 1. 添加标签  
 ` $ git tag tagName `	// 给当前commit添加标签  
 ` $ git tag tagName commitId `	// 给指定commit添加标签  
@@ -126,7 +127,7 @@
 ` $ git push origin --tags `	// 推送全部尚未推送的标签至远程仓库  
 
 
-## 五、自定义Git
+## 5. Custom Define
 1. 让Git显示颜色  
 ` $ git config --global color.ui true `  
 
@@ -143,14 +144,14 @@
 ***注2：每个仓库的Git配置文件都放在.git/config文件中.  
 当前用户的Git配置文件放在用户主目录下的一个隐藏文件.gitconfig中***  
 
-## 六、Rebase
+## 6. Rebase
 1. ` git rebase -i commitId `	// commitId为需要修改的commit的前一个commit的Id
 2. ` git commit --amend `	// 进入VIM修改Commit信息
 3. ` git rebase --continue `	// 修改完Commit Msg，继续操作命令
 4. ` gir rebase --abort `	// 放弃本次rebase操作
 
 
-## 七、Setting
+## 7. Setting
 - 系统级别Git配置文件：`/etc/gitconfig`
 - 用户级别Git配置文件：`~/.gitconfig`
 - 项目级别Git配置文件：`<Project Path>/.git/config`
@@ -160,7 +161,7 @@
 ***使用`--global`选项，更改的是用户级别配置，去掉`--global`选项更改的是项目级别配置***
 
 
-## 八、Others
+## 8. Others
 1. `find . -name ".git" | xargs rm -Rf`	// 删除Git仓库信息
 
 
