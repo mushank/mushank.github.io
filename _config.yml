@@ -61,6 +61,17 @@ related: true
 # do you want some animations?
 animation: true
 
+# The following settings are used to mimic the Github style Markdown
+highlighter: pygments
+markdown: redcarpet
+redcarpet:
+  extensions:
+    - hard_wrap
+    - no_intra_emphasis
+    - autolink
+    - strikethrough
+    - fenced_code_blocks
+
 gems:
   - jemoji
   - jekyll-mentions
