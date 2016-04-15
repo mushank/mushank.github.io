@@ -1,53 +1,30 @@
-# main text of home
+# Name / bio
 name: Jack Zhang
 bio: 'A Man who travels the world eating noodles.'
+# Avatar, if it is an external image, update external-avatar for true
+avatar: https://avatars.githubusercontent.com/u/6365092
+external-avatar: true
 
-# if it's an external image, update below for true
-external-image: true
-picture: https://avatars.githubusercontent.com/u/6365092
+# Base URL
+url: http://127.0.0.1:4000
+# url: http://mushank.github.io
 
-# url: http://127.0.0.1:4000
-url: http://mushank.github.io
-# your url: http://USERNAME.github.io
-
+# Settings
 permalink: ./:title/
-
 markdown: kramdown
 highlighter: rouge
 
-analytics-google: 'UA-MYANALYTICS'
+# Page width | options: [normal, large] | normal = 560px / large = 810px | default: normal 
+width: large
 
-# if you don't want comments in your posts, set to false
-disqus: false
-
-# if you don't have any of social below, comment the line
-# facebook: myfacebook
-# twitter: mytwitter
-# google: mygoogle
-# instagram: myinstagram
-# pinterest: mypinterest
-# linkedin: mylinkedin
-# youtube: myyoutube
-# spotify: myspotify
-github: mushank
-# medium: medium
-email: mushank@Gmail.com
-
-# do you want a larger site? change the option below
-# options: [normal, large] | default: normal
-# normal = 560px / large = 810px
-width: normal
-
-# if you don't need pagination, comment the *paginate* configs below
-# paginate: 5
+# Page number, if you do not want to show pagination, comment below
+# paginate: 10
 # paginate_path: "blog/:num/"
 
-# if you don't need projects, comment the *projects* configs below
-projects: true
-
-# if you don't need "about" or "blog", comment them out below
-about: true
+# if you don't need these items, comment them below
 blog: true
+projects: true
+about: true
 
 # do you want to show the "read time" of the posts?
 read-time: true
@@ -60,6 +37,23 @@ related: true
 
 # do you want some animations?
 animation: true
+
+# socials
+# facebook: myfacebook
+# twitter: mytwitter
+# google: mygoogle
+# instagram: myinstagram
+# pinterest: mypinterest
+# linkedin: mylinkedin
+# youtube: myyoutube
+# spotify: myspotify
+github: mushank
+# medium: medium
+email: mushank@Gmail.com
+
+# Widgets
+# disqus: false
+# analytics-google: 'Your-Google-Analytics-Account'
 
 gems:
   - jemoji

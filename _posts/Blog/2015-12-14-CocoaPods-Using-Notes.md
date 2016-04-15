@@ -2,6 +2,7 @@
 title: "CocoaPods Using Notes"
 date: 2015-12-14 19:00:00
 img: indigo/indigo.png
+permalink: blog/CocoaPods Using Notes
 tag: [iOS, CocoaPods]
 blog: true
 layout: post

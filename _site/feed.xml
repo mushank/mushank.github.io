@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://127.0.0.1:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://127.0.0.1:4000/" rel="alternate" type="text/html" /><updated>2016-04-16T00:28:04+08:00</updated><id>http://127.0.0.1:4000/</id><title>Jack Zhang</title><entry><title>iOS Dev Pit Records</title><link href="http://127.0.0.1:4000/iOS-Dev-Pit-Records/" rel="alternate" type="text/html" title="iOS Dev Pit Records" /><published>2016-03-29T03:00:00+08:00</published><updated>2016-03-29T03:00:00+08:00</updated><id>http://127.0.0.1:4000/iOS-Dev-Pit-Records</id><content type="html" xml:base="http://127.0.0.1:4000/iOS-Dev-Pit-Records/">&lt;h1 id=&quot;ios-dev-pit-records&quot;&gt;iOS Dev Pit Records&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://127.0.0.1:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://127.0.0.1:4000/" rel="alternate" type="text/html" /><updated>2016-04-16T02:00:12+08:00</updated><id>http://127.0.0.1:4000/</id><title>Jack Zhang</title><entry><title>iOS Dev Pit Records</title><link href="http://127.0.0.1:4000/iOS-Dev-Pit-Records/" rel="alternate" type="text/html" title="iOS Dev Pit Records" /><published>2016-03-29T03:00:00+08:00</published><updated>2016-03-29T03:00:00+08:00</updated><id>http://127.0.0.1:4000/iOS-Dev-Pit-Records</id><content type="html" xml:base="http://127.0.0.1:4000/iOS-Dev-Pit-Records/">&lt;h1 id=&quot;ios-dev-pit-records&quot;&gt;iOS Dev Pit Records&lt;/h1&gt;
 
 &lt;h2 id=&quot;how-to-add-usrlocalbin-in-path-on-mac&quot;&gt;1. How to add /usr/local/bin in $PATH on Mac&lt;/h2&gt;
 
@@ -482,7 +482,7 @@ Plugin for Xcode to make working with colors more visual.&lt;br /&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;side-by-side&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;toleft&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;image&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://127.0.0.1:4000/https://avatars.githubusercontent.com/u/6365092&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Alt Text&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;image&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://127.0.0.1:4000/&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Alt Text&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
         &lt;span class=&quot;nt&quot;&gt;&amp;lt;figcaption&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;caption&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Photo by John Doe&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figcaption&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
 
@@ -493,7 +493,7 @@ Plugin for Xcode to make working with colors more visual.&lt;br /&gt;
 
 &lt;div class=&quot;side-by-side&quot;&gt;
     &lt;div class=&quot;toleft&quot;&gt;
-        &lt;img class=&quot;image&quot; src=&quot;http://127.0.0.1:4000/https://avatars.githubusercontent.com/u/6365092&quot; alt=&quot;Alt Text&quot; /&gt;
+        &lt;img class=&quot;image&quot; src=&quot;http://127.0.0.1:4000/&quot; alt=&quot;Alt Text&quot; /&gt;
         &lt;figcaption class=&quot;caption&quot;&gt;Photo by John Doe&lt;/figcaption&gt;
     &lt;/div&gt;
 
@@ -510,7 +510,7 @@ Plugin for Xcode to make working with colors more visual.&lt;br /&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
 
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;toright&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;image&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://127.0.0.1:4000/https://avatars.githubusercontent.com/u/6365092&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Alt Text&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;image&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://127.0.0.1:4000/&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Alt Text&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
         &lt;span class=&quot;nt&quot;&gt;&amp;lt;figcaption&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;caption&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Photo by John Doe&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figcaption&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -521,7 +521,7 @@ Plugin for Xcode to make working with colors more visual.&lt;br /&gt;
     &lt;/div&gt;
 
     &lt;div class=&quot;toright&quot;&gt;
-        &lt;img class=&quot;image&quot; src=&quot;http://127.0.0.1:4000/https://avatars.githubusercontent.com/u/6365092&quot; alt=&quot;Alt Text&quot; /&gt;
+        &lt;img class=&quot;image&quot; src=&quot;http://127.0.0.1:4000/&quot; alt=&quot;Alt Text&quot; /&gt;
         &lt;figcaption class=&quot;caption&quot;&gt;Photo by John Doe&lt;/figcaption&gt;
     &lt;/div&gt;
 &lt;/div&gt;
