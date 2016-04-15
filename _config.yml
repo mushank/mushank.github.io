@@ -1,16 +1,16 @@
 # main text of home
 name: Jack Zhang
-bio: 'A Man who travels the world eating noodles'
+bio: 'A Man who travels the world eating noodles.'
 
 # if it's an external image, update below for true
-external-image: false
-picture: 'assets/images/profile.jpg'
+external-image: true
+picture: https://avatars.githubusercontent.com/u/6365092
 
 # url: http://127.0.0.1:4000
 url: http://mushank.github.io
 # your url: http://USERNAME.github.io
 
-permalink: ./blog/:title/
+permalink: ./:title/
 
 markdown: kramdown
 highlighter: rouge
@@ -60,17 +60,6 @@ related: true
 
 # do you want some animations?
 animation: true
-
-# The following settings are used to mimic the Github style Markdown
-highlighter: pygments
-markdown: redcarpet
-redcarpet:
-  extensions:
-    - hard_wrap
-    - no_intra_emphasis
-    - autolink
-    - strikethrough
-    - fenced_code_blocks
 
 gems:
   - jemoji
