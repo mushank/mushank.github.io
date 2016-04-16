@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://127.0.0.1:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://127.0.0.1:4000/" rel="alternate" type="text/html" /><updated>2016-04-16T19:13:42+08:00</updated><id>http://127.0.0.1:4000/</id><title>Jack Zhang</title><entry><title>iOS Dev Pit Records</title><link href="http://127.0.0.1:4000/iOS-Dev-Pit-Records/" rel="alternate" type="text/html" title="iOS Dev Pit Records" /><published>2016-03-29T03:00:00+08:00</published><updated>2016-03-29T03:00:00+08:00</updated><id>http://127.0.0.1:4000/iOS-Dev-Pit-Records</id><content type="html" xml:base="http://127.0.0.1:4000/iOS-Dev-Pit-Records/">&lt;h1 id=&quot;ios-dev-pit-records&quot;&gt;iOS Dev Pit Records&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="http://127.0.0.1:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://127.0.0.1:4000/" rel="alternate" type="text/html" /><updated>2016-04-16T20:35:50+08:00</updated><id>http://127.0.0.1:4000/</id><title>Jack Zhang</title><entry><title>iOS Dev Pit Records</title><link href="http://127.0.0.1:4000/iOS-Dev-Pit-Records/" rel="alternate" type="text/html" title="iOS Dev Pit Records" /><published>2016-03-29T03:00:00+08:00</published><updated>2016-03-29T03:00:00+08:00</updated><id>http://127.0.0.1:4000/iOS-Dev-Pit-Records</id><content type="html" xml:base="http://127.0.0.1:4000/iOS-Dev-Pit-Records/">&lt;h1 id=&quot;ios-dev-pit-records&quot;&gt;iOS Dev Pit Records&lt;/h1&gt;
 
 &lt;h2 id=&quot;how-to-add-usrlocalbin-in-path-on-mac&quot;&gt;1. How to add /usr/local/bin in $PATH on Mac&lt;/h2&gt;
 
@@ -780,6 +780,13 @@ It’s sometimes handy for breaking things up.&lt;/p&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><category term="markdown" /><category term="elements" /><summary>Summary:</summary></entry><entry><title>VIM Using Notes</title><link href="http://127.0.0.1:4000/Vim-Using-Notes/" rel="alternate" type="text/html" title="VIM Using Notes" /><published>2016-02-02T03:00:00+08:00</published><updated>2016-02-02T03:00:00+08:00</updated><id>http://127.0.0.1:4000/Vim-Using-Notes</id><content type="html" xml:base="http://127.0.0.1:4000/Vim-Using-Notes/">&lt;h1 id=&quot;vim-using-notes&quot;&gt;VIM Using Notes&lt;/h1&gt;
+
+&lt;h2 id=&quot;contents&quot;&gt;Contents&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#First-Level&quot;&gt;First Level&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Second-Level&quot;&gt;Second Level&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Third-Level&quot;&gt;Third Level&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;first-level&quot;&gt;First Level&lt;/h2&gt;
 

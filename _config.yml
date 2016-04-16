@@ -61,6 +61,7 @@ email: mushank@Gmail.com
 # disqus: 'Your-Disqus-Short-Name'
 # analytics-google: 'Your-Google-Analytics-Account'
 
+
 ####################################################
 # Plugins
 gems:
@@ -76,4 +77,4 @@ jekyll-mentions:
     base_url: https://github.com
 
 # Files you do not want Jekyll to deal with
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, indigo-gh-pages.zip, Rakefile, screen-shot.png, travis.sh]
+exclude: [_site]
