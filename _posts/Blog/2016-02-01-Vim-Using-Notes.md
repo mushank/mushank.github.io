@@ -7,8 +7,12 @@ layout: post
 
 ---
 
-
 # VIM Using Notes
+
+## Contents
+- [First Level](#First-Level)
+- [Second Level](#Second-Level)
+- [Third Level](#Third-Level)
 
 
 ## First Level
