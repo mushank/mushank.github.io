@@ -796,7 +796,12 @@ pre {
   border-radius: 3px;
 }
 .footer-main > .link {
-  display: inline;
+  color: #aaa;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: ease-in-out all 0.3s;
+          transition: ease-in-out all 0.3s;
+  padding-bottom: 1px;
 }
 .footer-main > .link > .icon {
   width: 15px !important;

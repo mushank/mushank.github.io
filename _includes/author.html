@@ -1,6 +1,8 @@
 <section class="author{% if site.disqus == false %} no-disqus{% endif %}">
     <div class="toleft">
+        <a class="link" href="{{ site.url }}/about">
         <img class="selfie" src="{% if site.external-avatar == true %}{{ site.avatar }}{% else %}{{ site.url }}/{{ site.avatar }}{% endif %}" alt="{{ site.name }}">
+        </a>
     </div>
 
     <div class="toright">
