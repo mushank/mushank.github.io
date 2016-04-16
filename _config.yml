@@ -7,11 +7,11 @@ avatar: https://avatars.githubusercontent.com/u/6365092
 external-avatar: true
 
 # Base URL
-url: http://127.0.0.1:4000
-# url: http://mushank.github.io
+# url: http://127.0.0.1:4000
+url: http://mushank.github.io
 
 # Permalink
-permalink: ./:title/
+permalink: ./post/archieve/:title/
 
 
 # Site modules, if you do not need someone, comment it.
@@ -23,8 +23,8 @@ about: true
 width: normal
 
 # Page number, if you do not want to show pagination, comment below
-paginate: 7
-paginate_path: "blog/:num/"
+# paginate: 7
+# paginate_path: ./post/pagination/:num/
 
 # Read time, if you do not want to show the read time of the posts, update read-time for false
 read-time: true
