@@ -11,7 +11,7 @@ external-avatar: true
 url: http://mushank.github.io
 
 # Permalink
-permalink: ./post/archieve/:title/
+permalink: ./post/:title/
 
 
 # Site modules, if you do not need someone, comment it.
@@ -24,7 +24,7 @@ width: normal
 
 # Page number, if you do not want to show pagination, comment below
 # paginate: 7
-# paginate_path: ./post/pagination/:num/
+# paginate_path: ./pagination/:num/
 
 # Read time, if you do not want to show the read time of the posts, update read-time for false
 read-time: true
