@@ -70,4 +70,7 @@
 <url>
 <loc>http://127.0.0.1:4000/tags/</loc>
 </url>
+<url>
+<loc>http://127.0.0.1:4000/blog/2/</loc>
+</url>
 </urlset>

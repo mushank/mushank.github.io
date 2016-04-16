@@ -13,6 +13,7 @@ url: http://127.0.0.1:4000
 # Permalink
 permalink: ./:title/
 
+
 # Site modules, if you do not need someone, comment it.
 blog: true
 projects: true
@@ -22,8 +23,8 @@ about: true
 width: normal
 
 # Page number, if you do not want to show pagination, comment below
-# paginate: 10
-# paginate_path: "blog/:num/"
+paginate: 7
+paginate_path: "blog/:num/"
 
 # Read time, if you do not want to show the read time of the posts, update read-time for false
 read-time: true
@@ -57,7 +58,7 @@ email: mushank@Gmail.com
 # medium: medium
 
 # Widgets
-# disqus: false
+# disqus: 'Your-Disqus-Short-Name'
 # analytics-google: 'Your-Google-Analytics-Account'
 
 ####################################################
