@@ -65,13 +65,12 @@ email: mushank@Gmail.com
 ####################################################
 # Plugins
 gems:
-  - jemoji
-  - jekyll-mentions
-  - jekyll-paginate
   - jekyll-seo-tag
-  - jekyll-feed
-  - jekyll-sitemap
+  - jekyll-paginate
   - jekyll-gist
+  # - jemoji
+  # - jekyll-mentions
+  # - jekyll-feed
 
 jekyll-mentions:
     base_url: https://github.com
