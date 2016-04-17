@@ -3,15 +3,16 @@ name: Jack Zhang
 bio: 'A Man who travels the world eating noodles.'
 
 # Avatar, if it is an external image, update external-avatar for true
-avatar: https://avatars.githubusercontent.com/u/6365092
-external-avatar: true
+avatar: ./assets/images/profile/avatar.jpg
+# avatar: https://avatars.githubusercontent.com/u/6365092
+external-avatar: false
 
 # Base URL
 # url: http://127.0.0.1:4000
 url: http://mushank.github.io
 
 # Permalink
-permalink: ./post/:title/
+permalink: ./post/:title
 
 # Site modules, if you do not need someone, comment it.
 blog: true

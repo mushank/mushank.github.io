@@ -1,8 +1,8 @@
 ---
-title: "Markdown Common Elements"
-date: 2016-02-24 19:00:00
-tag: [markdown, elements]
-projects: true
+title: "Markdown Notes Usual"
+date: 2015-07-01 19:00:00
+tag: [markdown]
+blog: true
 layout: post
 
 ---
@@ -139,11 +139,11 @@ Markdown can also contain images. I'll need to add something here sometime.
 
 {% highlight raw %}
 ![Markdowm Image][/image/url]
-<figcaption class="caption">Photo by John Doe</figcaption>
+<figcaption class="caption">Photo by Jack</figcaption>
 {% endhighlight %}
 
 ![Markdowm Image][6]
-<figcaption class="caption">Photo by John Doe</figcaption>
+<figcaption class="caption">Photo by Jack</figcaption>
 
 *Bigger Images*?
 
@@ -205,10 +205,3 @@ $(window).scroll(function() {
 
 });
 {% endhighlight %}
-
-[1]: http://daringfireball.net/projects/markdown/
-[2]: http://www.fileformat.info/info/unicode/char/2163/index.htm
-[3]: http://www.markitdown.net/
-[4]: http://daringfireball.net/projects/markdown/basics
-[5]: http://daringfireball.net/projects/markdown/syntax
-[6]: http://kune.fr/wp-content/uploads/2013/10/ghost-blog.jpg

@@ -1,8 +1,8 @@
 ---
-title: "Markdown Extra Components"
-date: 2016-02-24 19:00:00
-tag: [markdown, components, extra]
-projects: true
+title: "Markdown Notes Extre"
+date: 2015-07-02 19:00:00
+tag: [markdown]
+blog: true
 layout: post
 
 ---
@@ -114,18 +114,6 @@ You can add a especial *hr* to your text.
 {% endhighlight %}
 
 <div class="breaker"></div>
-
----
-
-## Gist
-
-You can add Gists from github.
-
-{% highlight raw %}
-{ % gist sergiokopplin/a344e39fef90e453c22815493475937c % }
-{% endhighlight %}
-
-{% gist sergiokopplin/a344e39fef90e453c22815493475937c %}
 
 ---
 
