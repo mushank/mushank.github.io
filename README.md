@@ -2,13 +2,10 @@
 
 ## Next step:
 
-### Bugs waiting to be fixed
-- There is still sth wrong with the pagination.html, now I hided it.
-
 ### Plugins
 - gems:
-	- jekyll-seo-tag
 	- jekyll-paginate
+	- jekyll-seo-tag
 	- jekyll-gist
 	- jemoji
 	- jekyll-mentions
