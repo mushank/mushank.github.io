@@ -13,7 +13,6 @@ url: http://mushank.github.io
 # Permalink
 permalink: ./post/:title/
 
-
 # Site modules, if you do not need someone, comment it.
 blog: true
 projects: true
@@ -76,4 +75,4 @@ jekyll-mentions:
     base_url: https://github.com
 
 # Files you do not want Jekyll to deal with
-exclude: [_site]
+exclude: [README.md]
