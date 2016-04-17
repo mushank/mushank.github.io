@@ -68,9 +68,9 @@ gems:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-gist
-  # - jemoji
-  # - jekyll-mentions
-  # - jekyll-feed
+  - jekyll-mentions
+  - jemoji
+  - jekyll-feed
 
 jekyll-mentions:
     base_url: https://github.com
