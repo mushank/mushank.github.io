@@ -1,5 +1,5 @@
 ---
-title: "iOS AppIcon Size"
+title: "iOS App Icon Size Summary"
 date: 2016-03-22 19:00:00
 tag: [iOS]
 blog: true
@@ -7,7 +7,6 @@ layout: post
 
 ---
 
-# iOS AppIcon Size
 
 ## iPhone AppIcon
 
@@ -33,10 +32,11 @@ layout: post
 - ItunesConnect: 1024px
  
 ## Summary
-iPhone: 58px, 80px, 87px, 120px, 180px
-iPad:29px, 40px, 58px, 76px, 80px, 152px, 167px
-itunesConnect: 1024px
+
+- **iPhone**: 58px, 80px, 87px, 120px, 180px  
+- **iPad**: 29px, 40px, 58px, 76px, 80px, 152px, 167px  
+- **itunesConnect**: 1024px  
 
 
-**Remark: 1pt = 2px**
+***Remark: 1pt = 2px***
 

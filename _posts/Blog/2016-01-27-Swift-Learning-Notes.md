@@ -7,8 +7,6 @@ layout: post
 
 ---
 
-# Swift Learning Notes
-
 ## Option
 - **An Optional is just an enum**  
 Conceptually it is like this (the <T> is a generic like as in Array<T>)...
