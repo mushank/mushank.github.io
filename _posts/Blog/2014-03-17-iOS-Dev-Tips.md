@@ -13,50 +13,7 @@ layout: post
 2. then use `ls` to make sure your `paths` file is in
 3. vim `paths`, add `/usr/local/bin` at the end of the file
 
-
-### 2. 如何判断判断某个日期为星期几
-
-```
-NSCalendar *calendar = [NSCalendar currentCalendar];  
-NSUInteger unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSWeekdayCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit;  
-NSDateComponents *dateComponent = [calendar components:unitFlags fromDate:date];  
-switch ([dateComponent weekday]) {  
-    case 1:{  
-        NSLog(@"周日");  
-        break;  
-    }  
-    case 2:{  
-        NSLog(@"周一");  
-        break;  
-    }  
-    case 3:{  
-        NSLog(@"周二");  
-        break;  
-    }  
-    case 4:{  
-        NSLog(@"周三");  
-        break;  
-    }  
-    case 5:{  
-        NSLog(@"周四");  
-        break;  
-    }  
-    case 6:{  
-        NSLog(@"周五");  
-        break;  
-    }  
-	case 7:{  
-        NSLog(@"周六");  
-        break;  
-    }  
-
-    default:  
-        break;  
-}  
-
-```
-
-### 3. 如何隐藏状态栏上的网络指示器
+### 2. 如何隐藏状态栏上的网络指示器
 
 `[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;`
 
@@ -157,7 +114,7 @@ self.navigationBar.titleTextAttributes = dic;
     {  
         return [self validateNumber:string];  
     }  
-    return YES;  
+    return YES;
 }  
   
 - (BOOL)validateNumber:(NSString*)number {  

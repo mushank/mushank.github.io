@@ -1,7 +1,7 @@
 ---
 title: "Markdown Notes Usual"
 date: 2015-07-01 19:00:00
-tag: [markdown]
+tag: [Markdown]
 blog: true
 layout: post
 
