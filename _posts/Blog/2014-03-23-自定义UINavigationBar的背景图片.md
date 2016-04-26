@@ -1,5 +1,5 @@
 ---
-title: "如何自定义UINavigationBar的背景图片"
+title: "自定义UINavigationBar的背景图片"
 date: 2014-03-23 23:12:00
 tag: [iOS, UINavigationBar]
 blog: true

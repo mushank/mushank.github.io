@@ -1,5 +1,5 @@
 ---
-title: "使用C++标准库Vector容器实现词频统计与排序"
+title: "C++ / STL / Vector容器实现词频统计与排序"
 date: 2014-07-19 16:00:00
 tag: [C++, STL, Vector]
 blog: true
@@ -7,7 +7,7 @@ layout: post
 
 ---
 
-使用STL中的Vector容器实现词频统计与排序,具体代码如下：
+采用STL中的Vector容器实现词频统计与排序，具体代码如下：
 
 ```
 #include <iostream>  

@@ -8,16 +8,19 @@ layout: post
 ---
 
 
-## iPhone AppIcon
+## AppIcon Size
+
+##### iPhone
 
 - iPhone Spotlight - iOS 5,6: 58px@2x, 87px@3x
+
 - iPhone Spotlight - iOS 7,8,9: 80px@2x, 120px@3x
 
 - iPhone Settings - iOS 5,6,7,8,9: 58px@2x, 87px@3x
 
 - iPhone App - iOS 7,8,9: 120px@2x, 180px@3x
 
-## iPad AppIcon
+##### iPad
 
 - iPad Settings - iOS 5,6,7,8,9: 29px@1x, 58px@2x
 
@@ -27,7 +30,7 @@ layout: post
 
 - iPad Pro App - iOS9: 167px@2x
 
-## Common 
+##### ItunesConnect
 
 - ItunesConnect: 1024px
  

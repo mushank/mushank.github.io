@@ -1,7 +1,7 @@
 ---
 title: "ZKUDIDManager"
 date: 2016-03-24 19:30:00
-tag: [iOS, UDID, Keychain, IDFV]
+tag: [iOS, UDID, IDFV, Keychain]
 projects: true
 layout: post
 

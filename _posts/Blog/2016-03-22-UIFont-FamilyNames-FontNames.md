@@ -7,8 +7,6 @@ layout: post
 
 ---
 
-# UIFont FamilyNames FontNames
-
 
 ``` 
 for (NSString *fontFamilyName in [UIFont familyNames]){

@@ -19,27 +19,27 @@ layout: post
 
 ***注：要注意将该状态和程序当前的请求数相对应，如果你设置属性之后状态栏还是显示指示器，很可能是因为刚设置好的属性被另一个网络请求给覆盖了。***
 
-### 4. 如何控制UIWebView不让其弹出选择复制菜单
+### 3. 如何控制UIWebView不让其弹出选择复制菜单
 
 ```
 [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitUserSelect='none';"];  
 [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitTouchCallout='none';"]; 
 ```
 
-### 5. 如何修改NavigationBar中title的字体大小和颜色
+### 4. 如何修改NavigationBar中title的字体大小和颜色
 
 ```
 NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,[UIFont boldSystemFontOfSize:21],NSFontAttributeName,nil];  
 self.navigationBar.titleTextAttributes = dic;  
 ```
 
-### 6. 如何修改UITextField中placeholder的字体颜色
+### 5. 如何修改UITextField中placeholder的字体颜色
 
 ```
 [_textField setValue:[UIColor redColor] forKeyPath:@"_placeholderLabel.textColor"];  
 ```
 
-### 7. 如何调整TextField不被软键盘遮挡
+### 6. 如何调整TextField不被软键盘遮挡
 
 ```
 // textField上移动画  
@@ -68,7 +68,7 @@ self.navigationBar.titleTextAttributes = dic;
 }
 ```
 
-### 8. 如何实现UITableViewCell自适应高度
+### 7. 如何实现UITableViewCell自适应高度
 
 ```
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath  
@@ -86,7 +86,7 @@ self.navigationBar.titleTextAttributes = dic;
 } 
 ```
 
-### 9. 如何判断一个字符串里只有纯数字
+### 8. 如何判断一个字符串里只有纯数字
 
 除了使用正则表达式，苹果还给我们提供了一个相当好用的函数，帮助我们实现相关功能：
 
@@ -105,7 +105,7 @@ self.navigationBar.titleTextAttributes = dic;
 }  
 ```
 
-### 10. 如何控制只允许用户输入数字
+### 9. 如何控制只允许用户输入数字
 
 ```
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string  

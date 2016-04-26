@@ -10,10 +10,10 @@ layout: post
 
 ## Package Manager —— `Alcatraz`
 
-1. Install, Paste this into your terminal:  
+1. Install, paste this into your terminal:  
 `curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/deploy/Scripts/install.sh | sh`
 
-2. Uninstall, Delete the plugin:
+2. Uninstall, delete the plugin:
 `rm -rf ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin`
 
 3. Remove all cached data:  
@@ -31,35 +31,36 @@ A Xcode 5+ plugin that adds more flexible autocompletion rather than just prefix
 
 > https://github.com/FuzzyAutocomplete/FuzzyAutocompletePlugin
 
-- `XToDo`  
-Xcode plugin to collect and list the `TODO`,`FIXME`,`???`,`!!!!`  
+- `VVDocumenter`  
+Xcode plug-in which helps you write documentation comment easier, for both Objective-C and Swift.  
 
-> https://github.com/trawor/XToDo
+> https://github.com/onevcat/VVDocumenter-Xcode
 
 - `SCXcodeSwitchExpander`  
 Xcode plugin that enables switch cases autocompletion.  
 
 > https://github.com/stefanceriu/SCXcodeSwitchExpander
 
+- `ColorSense`  
+Plugin for Xcode to make working with colors more visual.  
+
+> https://github.com/omz/ColorSense-for-Xcode
+
+- `XToDo`  
+Xcode plugin to collect and list the `TODO`,`FIXME`,`???`,`!!!!`  
+
+> https://github.com/trawor/XToDo
+
 - `deriveddata-exterminator`  
 A magic button in Xcode to exterminate the current project's DerivedData directories.  
 
 > https://github.com/kattrali/deriveddata-exterminator
-
-- `VVDocumenter`  
-Xcode plug-in which helps you write documentation comment easier, for both Objective-C and Swift.  
-
-> https://github.com/onevcat/VVDocumenter-Xcode
 
 - `ClangFormat`  
 Xcode plug-in to to use clang-format from in Xcode and consistently format your code with Clang.  
 
 > https://github.com/travisjeffery/ClangFormat-Xcode
 
-- `ColorSense`  
-Plugin for Xcode to make working with colors more visual.  
-
-> https://github.com/omz/ColorSense-for-Xcode
 
 
 
