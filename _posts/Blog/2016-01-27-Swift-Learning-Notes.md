@@ -470,7 +470,25 @@ lazy var myProperty = self.initializeMyProperty()
 
 	If you're dealing with an [AnyObject], you can cast the elements or the entire array ...  
 	
-	Let's use `var toolbarItems: [AnyObjects]` as an example 
+	Let's use `var toolbarItems: [AnyObjects]` as an example ...	
+	
+	```
+	for item in toolbarItems {
+		if let toolbarItem = item as? UIBarButtonItem{
+			// do sth with the toolbarItem (which will be a UIBarButtonItem here)
+		}
+	}
+	```	
+	...or...
+
+	```
+	for toolbarItem in toolbarItems as [UIBarButtonItem]{ // better be so, else crash!
+		// do sth with the toolbarItem (which will be a UIBarBtuuonItem)
+	
+	}	
+	```
+	
+	// can't do `as?` here because then it might be `for toolbarItem in nil`(makes no sense)
 	
 	
 	
