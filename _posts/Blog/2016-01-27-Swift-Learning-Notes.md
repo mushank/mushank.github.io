@@ -32,7 +32,9 @@ switch x{
 }
 
 ```
+
 ## Array
+
 ```
 var a = Array<String>()
 ... is the same as ...
@@ -49,6 +51,7 @@ for animal in animals{
 ```
 
 ## Dictionary
+
 ```
 var pac10teamRankings = Dictionary<String, Int>
 ... is the same as ...
@@ -64,6 +67,7 @@ for (key, value) in pac10teamRankings{
 ```
 
 ## Range
+
 - **A Range in Swift is just two end points of a sensible type**  
 Range is generic (e.g. Range<T>)  
 This is sort of a pseudo-representation of Range:  
@@ -341,14 +345,13 @@ lazy var myProperty = self.initializeMyProperty()
 	- If all properties in a base class (no superclass) have defaults, you get `init()` for free
 	- If a `struct` has no initializers, it will get a default one with all properties as arguments
 	
-	```
+```
 	struct MyStruct {
 		var x: Int = 42
-		var y: String = "moltuae"
-		
+		var y: String = "moltuae"	
 		init(x: Int, y: String)	// comes for free
 	}
-	```
+```
 	
 - **What can you do inside an init?**
 	- You can set any prperty's value, even those with default values
@@ -374,6 +377,7 @@ lazy var myProperty = self.initializeMyProperty()
 		**The calling of other inits must be complete before you can access properties or invoke methods**
 		
 > **Question:**"What's the differences between `designated init` and `convenience init`"  
+
 > **Maybe Answer is:**"You do not have to provide convenience initializers if your class does not require them. Create convenience initializers whenever a shortcut to a common initialization pattern will save time or make initialization of the class clearer in intent."
 		
 - **Inheriting init**
@@ -388,37 +392,41 @@ lazy var myProperty = self.initializeMyProperty()
 - **Failable init**
 	- If an init is declared with a ? (or !)after the word init, it returns an `Optional`
 	
-	```
-	init?(arg1:Type1, ...){
-		// might return nil in here
-	}
-	```
-	*These are rare.*  
-	*Note: The documentation does not seem to properly show these inits!*  
-	*But you'll be able to tell because the compiler will warn you about the type when you access it*  
+```
+init?(arg1:Type1, ...){
+	// might return nil in here
+}
+```
+
+*These are rare.*  
+*Note: The documentation does not seem to properly show these inits!*  
+*But you'll be able to tell because the compiler will warn you about the type when you access it*  
 	
-	```
-	let image = UIImage(named:"foo")	// image is an Optional UIImage (i.e. UIImage?)
-	// Usually we would use if-let for these cases ...
-	if let image = UIImage(named:"foo"){
-		// image was successfully created
-	}else{
-		// couldn't create the image
-	}
-	```
+	
+```
+let image = UIImage(named:"foo")	// image is an Optional UIImage (i.e. UIImage?)
+// Usually we would use if-let for these cases ...
+if let image = UIImage(named:"foo"){
+	// image was successfully created
+}else{
+	// couldn't create the image
+}
+```
 	
 - **Create Objects**
 	Usually you create an object by calling it's initializer via the type name ...  
 	
-	```
-	let x = CalculatorBrain()
-	let y = ComplicatedObject(arg1: 42, arg2: "hello", ...)
-	let z = [String]()
-	```
-	But sometimes you create objects by calling type methods in classes ...  
-	`let button = UIButton.buttonWithType(UIButtonType.System)`  
-	Or obviously sometimes other objects will create objects for you ...  
-	`let commaSeparatedArrayElements: String = ",".join(myArray)`  
+```
+let x = CalculatorBrain()
+let y = ComplicatedObject(arg1: 42, arg2: "hello", ...)
+let z = [String]()
+```
+
+But sometimes you create objects by calling type methods in classes ...  
+`let button = UIButton.buttonWithType(UIButtonType.System)`  
+
+Or obviously sometimes other objects will create objects for you ...  
+`let commaSeparatedArrayElements: String = ",".join(myArray)`  
 	
 	
 ## AnyObject
@@ -469,27 +477,26 @@ lazy var myProperty = self.initializeMyProperty()
 - **Casting Arrays of AnyObject**
 
 	If you're dealing with an [AnyObject], you can cast the elements or the entire array ...  
-	
-	Let's use `var toolbarItems: [AnyObjects]` as an example ...	
-	
-	```
-	for item in toolbarItems {
-		if let toolbarItem = item as? UIBarButtonItem{
-			// do sth with the toolbarItem (which will be a UIBarButtonItem here)
-		}
-	}
-	```	
-	...or...
 
-	```
-	for toolbarItem in toolbarItems as [UIBarButtonItem]{ // better be so, else crash!
-		// do sth with the toolbarItem (which will be a UIBarBtuuonItem)
+	Let's use `var toolbarItems: [AnyObjects]` as an example ...
+
+```
+for item in toolbarItems {
+	if let toolbarItem = item as? UIBarButtonItem{
+		// do sth with the toolbarItem (which will be a UIBarButtonItem here)
+	}
+}
+```
 	
-	}	
-	```
-	
-	// can't do `as?` here because then it might be `for toolbarItem in nil`(makes no sense)
-	
+...or...
+
+```
+for toolbarItem in toolbarItems as [UIBarButtonItem]{ // better be so, else crash!
+	// do sth with the toolbarItem (which will be a UIBarBtuuonItem)
+}
+// can't do `as?` here because then it might be `for toolbarItem in nil`(makes no sense)
+```
+
 	
 	
 
