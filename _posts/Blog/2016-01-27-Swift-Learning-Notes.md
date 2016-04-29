@@ -497,6 +497,55 @@ for toolbarItem in toolbarItems as [UIBarButtonItem]{ // better be so, else cras
 // can't do `as?` here because then it might be `for toolbarItem in nil`(makes no sense)
 ```
 
+- **Casting**
+
+	- Casting is not just for AnyObject
+	
+		You can cast with `as` (or check with `is`) any object pointer that makes sense
+		
+		For example...
+		
+		`let vc: UIViewController = CalculatorViewCOntroller()`
+		
+		The type of vc is UIVIewController (because we explicitly tyed it to be)  
+		And the assignment is legal because a CalcaulatorViewController is a UIVIewController  
+		But we can't say, for example, `vc.enter()`  
+		
+		```
+		if let calVC = vc as? CalculatorViewController{
+			// in here we could say calVC.enter() if we wanted to
+		}
+		```
+
+
+- **Function**
+
+	- Some Array<T> Methods
+
+		`+= [T]`	// not += T
+		`first -> T?`	// note optional
+		`last -> T?`	// note optional
+		
+		`var a = [a,b,c]`	// assume a,b,c are of some type(the same type)
+		
+		`append(T)`
+		`insert(T, atIndex: Int)`	// a.insert(d, atIndex:1), a = [a,d,b,c]
+		`splice(Array<T>, atIndex: Int)`	// a.splice([d,e], atIndex:1), a = [a,d,e,b,c]
+		
+		`removeAtIndex(Int)`	// a.removeAtIndex(1), a = [a,c]
+		`removeRange(Range)` // a.removeRange(0..<2), a = [c]
+		`replaceRange(Range, [T])`	// a.replaceRange(0...1, with: [x,y,z]), a = x,y,z,b[]
+		
+		`sort(isOrderedBefore: (T, T)) -> Bool)` // e.g., a.sort {$0 < $1} 
+		
+		
+		
+		
+
+
+
+
+
 	
 	
 

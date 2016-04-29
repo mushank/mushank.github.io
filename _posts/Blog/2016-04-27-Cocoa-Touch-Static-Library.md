@@ -24,12 +24,12 @@ layout: post
 	
 	- iOS Simulator
 	
-		>	rchitectures in the fat file: lib.a are: armv7 arm64
+	>	rchitectures in the fat file: lib.a are: armv7 arm64
 	
 	- Build Only Device
 	
-		>	input file libHTMF.a is not a fat file  
-			Non-fat file: libHTMF.a is architecture: x86_64
+	>	input file libHTMF.a is not a fat file  
+		Non-fat file: libHTMF.a is architecture: x86_64
 		
 
 ## 合并静态库
