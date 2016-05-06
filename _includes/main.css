@@ -803,6 +803,9 @@ pre {
           transition: ease-in-out all 0.3s;
   padding-bottom: 1px;
 }
+.footer-main > .link:hover {
+  border-color: #aaa;
+}
 .footer-main > .link > .icon {
   width: 15px !important;
   fill: #aaa !important;
@@ -821,7 +824,7 @@ pre {
   margin-top: 0;
 }
 .footer-main > .extra > .link {
-  color: #222;
+  color: #aaa;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   -webkit-transition: ease-in-out all 0.3s;
