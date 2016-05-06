@@ -1,6 +1,6 @@
 ---
 title: "iOS App Icon Size Summary"
-date: 2016-03-22 19:00:00
+date: 2016-03-22
 tag: [iOS]
 blog: true
 layout: post

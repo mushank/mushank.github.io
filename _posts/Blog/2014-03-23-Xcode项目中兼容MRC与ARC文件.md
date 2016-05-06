@@ -1,6 +1,6 @@
 ---
 title: "Xcode项目中兼容MRC与ARC文件"
-date: 2014-03-23 14:46:00
+date: 2014-03-23
 tag: [iOS, Xcode, MRC, ARC]
 blog: true
 layout: post

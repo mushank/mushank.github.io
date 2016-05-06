@@ -1,6 +1,6 @@
 ---
 title: "UIFont FamilyNames FontNames"
-date: 2016-03-22 19:00:00
+date: 2016-03-22
 tag: [iOS, UIFont]
 blog: true
 layout: post

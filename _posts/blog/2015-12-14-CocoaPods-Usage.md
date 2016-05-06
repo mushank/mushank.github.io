@@ -1,6 +1,6 @@
 ---
 title: "CocoaPods Usage"
-date: 2015-12-14 19:00:00
+date: 2015-12-14
 tag: [iOS, CocoaPods]
 blog: true
 layout: post

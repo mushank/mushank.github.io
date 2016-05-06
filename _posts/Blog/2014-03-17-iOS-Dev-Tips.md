@@ -1,6 +1,6 @@
 ---
 title: "iOS Dev Tips"
-date: 2014-03-17 19:30:00
+date: 2014-03-17
 tag: [iOS]
 blog: true
 layout: post

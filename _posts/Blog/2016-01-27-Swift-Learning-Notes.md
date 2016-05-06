@@ -1,6 +1,6 @@
 ---
 title: "Swift Learning Notes"
-date: 2016-01-27 19:00:00
+date: 2016-01-27
 tag: [iOS, Swift]
 blog: true
 layout: post

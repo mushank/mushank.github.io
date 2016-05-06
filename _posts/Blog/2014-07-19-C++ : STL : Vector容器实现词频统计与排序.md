@@ -1,6 +1,6 @@
 ---
 title: "C++ / STL / Vector容器实现词频统计与排序"
-date: 2014-07-19 16:00:00
+date: 2014-07-19
 tag: [C++, STL, Vector]
 blog: true
 layout: post

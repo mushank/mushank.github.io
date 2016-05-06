@@ -1,6 +1,6 @@
 ---
 title: "Cocoa Touch Static Library"
-date: 2016-04-27 16:26:42
+date: 2016-04-27
 tag: [iOS, Static Library]
 blog: true
 layout: post
