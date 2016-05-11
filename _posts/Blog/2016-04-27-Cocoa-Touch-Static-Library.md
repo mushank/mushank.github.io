@@ -4,7 +4,6 @@ date: 2016-04-27
 tag: [iOS, Static Library, bitcode]
 blog: true
 layout: post
-
 ---
 
 ## 简述
@@ -28,12 +27,14 @@ layout: post
 
 - 手动build方式
 
-	1. 选择`iOS Simulator` -> Command+B, 编译成功后，工程Projcets结构下显示的`*.a`文件即是编译成功的静态库文件，右键`Show in Finder` 找到该文件
-	2. 选择`Build Only Device` -> Command+B, 编译成功后，工程Projcets结构下显示的`*.a`文件即是编译成功的静态库文件，右键`Show in Finder`找到该文件
+  1. 选择`iOS Simulator` -> Command+B, 编译成功后，工程Projcets结构下显示的`*.a`文件即是编译成功的静态库文件，右键`Show in Finder` 找到该文件
+  2. 选择`Build Only Device` -> Command+B, 编译成功后，工程Projcets结构下显示的`*.a`文件即是编译成功的静态库文件，右键`Show in Finder`找到该文件
 
 
+注1：建议编译打包之前先进行清理工作，这样可以确保打出来的包是干净的。xcodebuild命令：`$ xcodebuild clean -project <name.xcodeproj> -alltargets`；手动方式：Xcode菜单 -> Product -> Clean, 进行清理即可。
 
-注：两种方式的步骤1. 2.中都分别编译生成了两份静态库文件，这是因为在`iphonesimulator`环境下编译的静态库只能供模拟器使用，在`iphoneos`环境下编译的静态库只能供真机环境使用。可以使用命令`$ lipo -info <lib.a>`查看对应静态库文件的属性，两个库文件对应的信息如下：
+
+注2：两种方式的步骤1. 2.中都分别编译生成了两份静态库文件，这是因为在`iphonesimulator`环境下编译的静态库只能供模拟器使用，在`iphoneos`环境下编译的静态库只能供真机环境使用。可以使用命令`$ lipo -info <lib.a>`查看对应静态库文件的属性，两个库文件对应的信息如下：
 
 - iOS Simulator
 
