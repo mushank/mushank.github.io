@@ -4,12 +4,11 @@ date: 2016-01-27
 tag: [iOS, Swift]
 blog: true
 layout: post
-
 ---
 
 ## Option
 - **An Optional is just an enum**  
-Conceptually it is like this (the <T> is a generic like as in Array<T>)...
+  Conceptually it is like this (the <T> is a generic like as in Array<T>)...
 
 ```
 enum Optional<T> {
@@ -69,8 +68,8 @@ for (key, value) in pac10teamRankings{
 ## Range
 
 - **A Range in Swift is just two end points of a sensible type**  
-Range is generic (e.g. Range<T>)  
-This is sort of a pseudo-representation of Range:  
+  Range is generic (e.g. Range<T>)  
+  This is sort of a pseudo-representation of Range:  
 
 ```
 struct Range<T>{
@@ -93,7 +92,7 @@ for i in [27...104]{ }	// Range is enumeratable, like Array, String, Dictionary
 ## NSObject
 - Base class for all Objective-C classes  
 - Some advanced features will require you to subclass from NSObject (and it can't hurt to do so)  
-***The best practice here is to always have your Swift classes inherit from NSObject.***  
+  ***The best practice here is to always have your Swift classes inherit from NSObject.***  
 
 ## NSNumber
 - Generic number-holding class
@@ -105,7 +104,7 @@ let intversion = n.intValue	// also doubleValue, boolValue, etc.
 
 ## NSDate
 - Used to find out the date and time right now or to store past or future dates.  
-- See alse NSCalendar, NSDateFormatter, NSDateComponents  
+- See else NSCalendar, NSDateFormatter, NSDateComponents  
 - If you are displaying a date in your UI, there are localization ramifications, so check these out!  
 
 ## NSData
@@ -113,9 +112,9 @@ let intversion = n.intValue	// also doubleValue, boolValue, etc.
 
 ## Data Structures in Swift
 - **Classes, Structures and Enumerations**  
-These are the 3 fundamental building blocks of data structures in Swift
+  These are the 3 fundamental building blocks of data structures in Swift
 - **Similarities**  
-1.Declaration syntax ...
+  1.Declaration syntax ...
 
 ```
 class CalculatorBrain{
@@ -155,40 +154,40 @@ init(argument1:Type, argument2:Type, ...){
 
 
 - **Differences**  
-1.Inheritance (class only)	// 继承  
-2.Introspection and casting (class only)	// 内省 和 转型  
-3.Value type (struct, enum) vs. Reference type (class)	// 值类型(拷贝变量) 与 引用类型（传递指针）  
-***堆内存中的对象，系统会自动为我们管理内存（ARC）***
+  1.Inheritance (class only)// 继承  
+  2.Introspection and casting (class only)// 内省 和 转型  
+  3.Value type (struct, enum) vs. Reference type (class)// 值类型(拷贝变量) 与 引用类型（传递指针）  
+  ***堆内存中的对象，系统会自动为我们管理内存（ARC）***
 
 ## Value vs. Reference
 - **Value (struct and enum)**
 
-	1. Copied when passed as an argument to a function
-	2. Copied when assigned to a different variable
-	3. Immutable if assigned to a variable with let
-	4. Remember that function parameters are, by default, constants
-	5. You can put the keyword `var` on an parameter, and it will be mutable, but it's still a copy
-	6. You must note any func that can mutate a struct/enum with the keyword `mutating`
+  1. Copied when passed as an argument to a function
+  2. Copied when assigned to a different variable
+  3. Immutable if assigned to a variable with let
+  4. Remember that function parameters are, by default, constants
+  5. You can put the keyword `var` on an parameter, and it will be mutable, but it's still a copy
+  6. You must note any func that can mutate a struct/enum with the keyword `mutating`
 
 - **Reference (class)**
-	1. Stored in the heap and reference counted (automatically)
-	2. Constant pointers to a class(let) still can mutate by calling methods and changing properties
-	3. When passed as an argument, does not make a copy (just passing a pointer to same instance)
+  1. Stored in the heap and reference counted (automatically)
+  2. Constant pointers to a class(let) still can mutate by calling methods and changing properties
+  3. When passed as an argument, does not make a copy (just passing a pointer to same instance)
 
 - **Choosing which to use**
-	1. Usually you will choose class over struct. struct tends to be more for fundamental types.
-	2. Use of enum is situational (any time you have a type of data with discrete values)
+  1. Usually you will choose class over struct. struct tends to be more for fundamental types.
+  2. Use of enum is situational (any time you have a type of data with discrete values)
 
 ## Method
 - **Obviously you can override methods/properties in your superclass**
 
-	1. Precede your func or var with the keywork `override`
-	2. A method can be marked `final` which will prevent subclasses from being able to override
-	3. Classes can alse be marked final
+  1. Precede your func or var with the keywork `override`
+  2. A method can be marked `final` which will prevent subclasses from being able to override
+  3. Classes can alse be marked final
 
 - **Both types and instances can have methods/properties**
 
-	1. For this example, lets consider the struct Double (yes, Double is a struct)
+  1. For this example, lets consider the struct Double (yes, Double is a struct)
 
 ```
 var d:Double = ...
@@ -328,23 +327,23 @@ lazy var myProperty = self.initializeMyProperty()
 ```
 - **This still satisfies the "you must initialize all of your properties" rule**
 - **Unfortunately, things initialized this way can't be constants (i.e., `var` ok, `let` not okay)**  
-*Only vars can be lazily initialized*  
-*If you had constants in your class, those would have to be initializing in your initializer*
+  *Only vars can be lazily initialized*  
+  *If you had constants in your class, those would have to be initializing in your initializer*
 - **This can be used to get around some initialization dependency conundrums**
 
 ## Initialization
 
 - **When is an init method needed?**  
-	- init methods are not so common because properties can have their defaults set using `=`
-	- Or properties might be Optionals, in which case they start out `nil`
-	- You can also initialize a property by executing a closeure
-	-  Or use lazy instantiation
-	- So you only need init when a value can't be set in any of these ways
-	
+  - init methods are not so common because properties can have their defaults set using `=`
+  - Or properties might be Optionals, in which case they start out `nil`
+  - You can also initialize a property by executing a closeure
+  - Or use lazy instantiation
+  - So you only need init when a value can't be set in any of these ways
+
 - **You also get some "free" init methods**
-	- If all properties in a base class (no superclass) have defaults, you get `init()` for free
-	- If a `struct` has no initializers, it will get a default one with all properties as arguments
-	
+  - If all properties in a base class (no superclass) have defaults, you get `init()` for free
+  - If a `struct` has no initializers, it will get a default one with all properties as arguments
+
 ```
 	struct MyStruct {
 		var x: Int = 42
@@ -352,46 +351,47 @@ lazy var myProperty = self.initializeMyProperty()
 		init(x: Int, y: String)	// comes for free
 	}
 ```
-	
+
 - **What can you do inside an init?**
-	- You can set any prperty's value, even those with default values
-	- Constant prperties (i.e. properties declared with `let`)can be set
-	- You can call other init methods in your own class using `self.init(<args>)`
-	- In a class, you can of course also call `super.init(<args>)`
-	- But there are some rules for calling inits from inits in a `class` ...
+  - You can set any prperty's value, even those with default values
+  - Constant prperties (i.e. properties declared with `let`)can be set
+  - You can call other init methods in your own class using `self.init(<args>)`
+  - In a class, you can of course also call `super.init(<args>)`
+  - But there are some rules for calling inits from inits in a `class` ...
 
 - **What are you required to do inside init?**
-	- By the time any init is done, all properties must have values (optionals can have the value nil)
-	- There are two types of inits in a `class`, `convenience` and `designated` (i.e. not convenience)
+  - By the time any init is done, all properties must have values (optionals can have the value nil)
+  - There are two types of inits in a `class`, `convenience` and `designated` (i.e. not convenience)
 
-	- ***Rules for designated init***
-		1. `A designated init must (and can only) call a designated init that is in its immediate superclass`
-		2. `You must initialize all properties introduced by your class before calling a superclass's init`
-		3. `You must call a superclass's init before you assign a value to an inherited property`
-		
-	- ***Rules for convenience init***
-		1. `A convenience init must (and can only) call a designated init in its own class`
-		2. `A convenience init may call a designated init indirectly (through another convenience init)`
-		3. `A convenience init must call a designated init before it can set any property values`
-		
-		**The calling of other inits must be complete before you can access properties or invoke methods**
-		
+  - ***Rules for designated init***
+    1. `A designated init must (and can only) call a designated init that is in its immediate superclass`
+    2. `You must initialize all properties introduced by your class before calling a superclass's init`
+    3. `You must call a superclass's init before you assign a value to an inherited property`
+
+  - ***Rules for convenience init***
+    1. `A convenience init must (and can only) call a designated init in its own class`
+    2. `A convenience init may call a designated init indirectly (through another convenience init)`
+    3. `A convenience init must call a designated init before it can set any property values`
+
+    **The calling of other inits must be complete before you can access properties or invoke methods**
+
 > **Question:**"What's the differences between `designated init` and `convenience init`"  
 
+
 > **Maybe Answer is:**"You do not have to provide convenience initializers if your class does not require them. Create convenience initializers whenever a shortcut to a common initialization pattern will save time or make initialization of the class clearer in intent."
-		
+
 - **Inheriting init**
-	1. If you do not implement any designated inits, you'll inherit all of your superclass's designateds
-	2. If you override all of your superclass's designated inits, you'll inherit all it's convenience inits
-	3. If you implement no inits, you'll inherit all of your superclass's inits
+  1. If you do not implement any designated inits, you'll inherit all of your superclass's designateds
+  2. If you override all of your superclass's designated inits, you'll inherit all it's convenience inits
+  3. If you implement no inits, you'll inherit all of your superclass's inits
 
 - **Required init**
-	1. A class can mark one or more of its init methods as `required`
-	2. Any subclass must implement said init methods (though they can be inherited per above rules)
-	
+  1. A class can mark one or more of its init methods as `required`
+  2. Any subclass must implement said init methods (though they can be inherited per above rules)
+
 - **Failable init**
-	- If an init is declared with a ? (or !)after the word init, it returns an `Optional`
-	
+  - If an init is declared with a ? (or !)after the word init, it returns an `Optional`
+
 ```
 init?(arg1:Type1, ...){
 	// might return nil in here
@@ -401,8 +401,8 @@ init?(arg1:Type1, ...){
 *These are rare.*  
 *Note: The documentation does not seem to properly show these inits!*  
 *But you'll be able to tell because the compiler will warn you about the type when you access it*  
-	
-	
+​	
+​	
 ```
 let image = UIImage(named:"foo")	// image is an Optional UIImage (i.e. UIImage?)
 // Usually we would use if-let for these cases ...
@@ -412,10 +412,10 @@ if let image = UIImage(named:"foo"){
 	// couldn't create the image
 }
 ```
-	
+
 - **Create Objects**
-	Usually you create an object by calling it's initializer via the type name ...  
-	
+  Usually you create an object by calling it's initializer via the type name ...  
+
 ```
 let x = CalculatorBrain()
 let y = ComplicatedObject(arg1: 42, arg2: "hello", ...)
@@ -427,58 +427,58 @@ But sometimes you create objects by calling type methods in classes ...
 
 Or obviously sometimes other objects will create objects for you ...  
 `let commaSeparatedArrayElements: String = ",".join(myArray)`  
-	
-	
+​	
+​	
 ## AnyObject
 
 - **Special "Type" (actually it's a Protocol)**
-	- Used primarily for compatibility with existing Objective-C-based APIs
-	
-- **Where will you see it?**
-	1. As properties (either singularly or as an array of them), e.g. ...
-	`var destinationViewController: AnyObject`  
-	`var toolbarItems: [AnyObject]`  
-	
-	2. or as arguments to functions ...  
-	`func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject)`  
-	`func addConstraints(constraints: [AnyObject])`  
-	`func appendDigit(sender: AnyObject)`  
+  - Used primarily for compatibility with existing Objective-C-based APIs
 
-	3. or even as return types from functions ...  
-	`class func buttonWithType(buttonType: UIButtonType) -> AnyObject`
+- **Where will you see it?**
+  1. As properties (either singularly or as an array of them), e.g. ...
+     `var destinationViewController: AnyObject`  
+     `var toolbarItems: [AnyObject]`  
+
+  2. or as arguments to functions ...  
+     `func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject)`  
+     `func addConstraints(constraints: [AnyObject])`  
+     `func appendDigit(sender: AnyObject)`  
+
+  3. or even as return types from functions ...  
+     `class func buttonWithType(buttonType: UIButtonType) -> AnyObject`
 
 
 - **How do we use AnyObject?**
-	- we don't usually use it directly
-	- Instead, we convert it to anouter, known type
-	
+  - we don't usually use it directly
+  - Instead, we convert it to anouter, known type
+
 - **How do we convert it?**
-	- We need to create a new variable which is of a known object type (i.e. not AnyObject)
-	- Then we assign this new variable to hold the thing that is AnyObject
-	- Of course, that new variable has to be of a compatible type
-	- If we try to force the AnyObject into something incompatible, crash!
-	- But there are ways to check compatibilit y (either before forcing or while forcing)
-	
+  - We need to create a new variable which is of a known object type (i.e. not AnyObject)
+  - Then we assign this new variable to hold the thing that is AnyObject
+  - Of course, that new variable has to be of a compatible type
+  - If we try to force the AnyObject into something incompatible, crash!
+  - But there are ways to check compatibilit y (either before forcing or while forcing)
+
 - **Casting AnyObject**
-	- We "force" an AnyObject to be something else by "casting" it using the `as` keyword ...  
-	
-		Let's use `var destinationViewController: AnyObject` as an example ...  
-		`let calcVC = destinationViewController as CalculatorViewController`  
-		... this would crash if "dvc"" was not, in fact, a CalculatorViewController (or subclass thereof)  
-	
-		To protect against a crash, we can use `if let` with `as?` ...  
-		`if let calcVC = destinationViewController as? CalculatorViewController { ... }`  
-		... `as?` returns an `Optional` (calcVC = nil if dvc was not a CalculatorViewController)  
-		
-		Or we can check before we even try to do as with the `is` keyword
-		`if destinationViewController is CalculatorViewController { ... }`
-	
-	
+  - We "force" an AnyObject to be something else by "casting" it using the `as` keyword ...  
+
+    Let's use `var destinationViewController: AnyObject` as an example ...  
+    `let calcVC = destinationViewController as CalculatorViewController`  
+    ... this would crash if "dvc"" was not, in fact, a CalculatorViewController (or subclass thereof)  
+
+    To protect against a crash, we can use `if let` with `as?` ...  
+    `if let calcVC = destinationViewController as? CalculatorViewController { ... }`  
+    ... `as?` returns an `Optional` (calcVC = nil if dvc was not a CalculatorViewController)  
+
+    Or we can check before we even try to do as with the `is` keyword
+    `if destinationViewController is CalculatorViewController { ... }`
+
+
 - **Casting Arrays of AnyObject**
 
-	If you're dealing with an [AnyObject], you can cast the elements or the entire array ...  
+  If you're dealing with an [AnyObject], you can cast the elements or the entire array ...  
 
-	Let's use `var toolbarItems: [AnyObjects]` as an example ...
+  Let's use `var toolbarItems: [AnyObjects]` as an example ...
 
 ```
 for item in toolbarItems {
@@ -487,7 +487,7 @@ for item in toolbarItems {
 	}
 }
 ```
-	
+
 ...or...
 
 ```
@@ -499,57 +499,56 @@ for toolbarItem in toolbarItems as [UIBarButtonItem]{ // better be so, else cras
 
 - **Casting**
 
-	- Casting is not just for AnyObject
-	
-		You can cast with `as` (or check with `is`) any object pointer that makes sense
-		
-		For example...
-		
-		`let vc: UIViewController = CalculatorViewCOntroller()`
-		
-		The type of vc is UIVIewController (because we explicitly tyed it to be)  
-		And the assignment is legal because a CalcaulatorViewController is a UIVIewController  
-		But we can't say, for example, `vc.enter()`  
-		
-		```
-		if let calVC = vc as? CalculatorViewController{
-			// in here we could say calVC.enter() if we wanted to
-		}
-		```
+  - Casting is not just for AnyObject
+
+    You can cast with `as` (or check with `is`) any object pointer that makes sense
+
+    For example...
+
+    `let vc: UIViewController = CalculatorViewCOntroller()`
+
+    The type of vc is UIVIewController (because we explicitly tyed it to be)  
+    And the assignment is legal because a CalcaulatorViewController is a UIVIewController  
+    But we can't say, for example, `vc.enter()`  
+
+    ```
+    if let calVC = vc as? CalculatorViewController{
+    	// in here we could say calVC.enter() if we wanted to
+    }
+    ```
 
 
 - **Function**
 
-	- Some Array<T> Methods
+  - Some Array<T> Methods
 
-		`+= [T]`	// not += T
-		`first -> T?`	// note optional
-		`last -> T?`	// note optional
-		
-		`var a = [a,b,c]`	// assume a,b,c are of some type(the same type)
-		
-		`append(T)`
-		`insert(T, atIndex: Int)`	// a.insert(d, atIndex:1), a = [a,d,b,c]
-		`splice(Array<T>, atIndex: Int)`	// a.splice([d,e], atIndex:1), a = [a,d,e,b,c]
-		
-		`removeAtIndex(Int)`	// a.removeAtIndex(1), a = [a,c]
-		`removeRange(Range)` // a.removeRange(0..<2), a = [c]
-		`replaceRange(Range, [T])`	// a.replaceRange(0...1, with: [x,y,z]), a = x,y,z,b[]
-		
-		`sort(isOrderedBefore: (T, T)) -> Bool)` // e.g., a.sort {$0 < $1} 
-		
-		
-		
-		
+    `+= [T]`	// not += T
+    `first -> T?`	// note optional
+    `last -> T?`	// note optional
+
+    `var a = [a,b,c]`	// assume a,b,c are of some type(the same type)
+
+    `append(T)`
+    `insert(T, atIndex: Int)`	// a.insert(d, atIndex:1), a = [a,d,b,c]
+    `splice(Array<T>, atIndex: Int)`	// a.splice([d,e], atIndex:1), a = [a,d,e,b,c]
+
+    `removeAtIndex(Int)`	// a.removeAtIndex(1), a = [a,c]
+    `removeRange(Range)` // a.removeRange(0..<2), a = [c]
+    `replaceRange(Range, [T])`	// a.replaceRange(0...1, with: [x,y,z]), a = x,y,z,b[]
+
+    `sort(isOrderedBefore: (T, T)) -> Bool)` // e.g., a.sort {$0 < $1} 
+
+    ​
 
 
 
 
 
-	
-	
 
-	
+​	
+​	
+
+​	
 
 
 
