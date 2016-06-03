@@ -1,5 +1,3 @@
-# 初探UITableView优化
-
 ### Summary
 
 `UITableView`的优化主要可以从以下三个方面进行考虑：
