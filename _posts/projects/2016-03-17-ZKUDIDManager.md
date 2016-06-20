@@ -4,7 +4,6 @@ date: 2016-03-24 19:30:00
 tag: [iOS, UDID, IDFV, Keychain]
 projects: true
 layout: post
-
 ---
 
 **Generate and manage persistent UDID(Unique Device Identifier) in iOS device.**
@@ -16,7 +15,7 @@ layout: post
 ## 1. Install
 
 ```
-pod 'ZKUDIDManager', '~> 1.0.2'
+pod 'ZKUDIDManager', '~> 1.0.5'
 ```
 
 *Noti: Requires iOS6.0 and later*
