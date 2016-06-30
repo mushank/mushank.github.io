@@ -19,7 +19,7 @@ layout: post
 - 执行install命令无反应  
 这是因为Ruby默认源使用的是cocoapod.org，国内访问这个网址偶尔会有困难，可通过将Ruby源替换成淘宝来解决。替换命令如下：  
 `$ gem sources --remove https://rubygems.org/`  
-`$ gem sources -a https://taobao.org/`  
+`$ gem sources -add https://ruby.taobao.org/`  
 执行命令`gem sources -l`来查看是否替换成功，正常输出如下：  
 
 	>	*** CURRENT SOURCES ***  
