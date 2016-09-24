@@ -1,7 +1,7 @@
 ---
-title: "最大子列和问题"
+title: "Maximum Subsequence Sum"
 date: 2011-06-02
-tag: [C, 子序列和]
+tag: [C, Subsequence]
 blog: true
 layout: post
 
