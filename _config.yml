@@ -1,80 +1,112 @@
-# Name / Bio
-name: Jack Zhang
-bio: 'Cheating for stars is my ultimate goal!'
-
-# Avatar, if it is an external image, update external-avatar for true
-avatar: ./assets/images/profile/avatar.jpg
-# avatar: https://avatars.githubusercontent.com/u/6365092
-external-avatar: false
-
-# Base URL
-# url: http://127.0.0.1:4000
-url: http://mushank.github.io
-
-# Permalink
-permalink: ./post/:title
-
-# Site modules, if you do not need someone, comment it.
-blog: true
-projects: true
-about: true
-
-# Page width | options: [normal, large] | normal = 560px / large = 810px | default: normal 
-width: normal
-
-# Page number, if you do not want to show pagination, comment below
-# paginate: 7
-# paginate_path: ./pagination/:num/
-
-# Read time, if you do not want to show the read time of the posts, update read-time for false
-read-time: true
-
-# Tags, if you do not want to show the tags inside the posts, update show-tags for false
-show-tags: true
-
-# Related posts, if you do not want to show related posts inside a post, update related for false
-related: true
-
-# Animation, if you do not want any animations, update animation for false
-animation: true
-
-# Markdown
-markdown: kramdown
-
-# Highlighter
-highlighter: rouge
-
-# Social links, comment the ones you do not want to show
-github: mushank
+# Site settings
+title: Mushank
+SEOTitle: Mushank | Jack's Blog
+header-img: img/home-bg.jpg
 email: mushank@Gmail.com
-# facebook: mushank
-# twitter: mushank
-# linkedin: mushank
-# google: mushank
-# youtube: mushank
-# instagram: myinstagram
-# pinterest: mypinterest
-
-# spotify: myspotify
-# medium: medium
-
-# Widgets
-# disqus: 'Your-Disqus-Short-Name'
-# analytics-google: 'Your-Google-Analytics-Account'
+description: "关于移动开发与设计、生活与艺术 | Mushank, Mobile Dev & Design, Life & Art | 这里是 @Jack 的个人博客，与你一起发现更大的世界。"
+keyword: "Jack, Mushank, Blog"
+url: "http://127.0.0.1:4000"            # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
-####################################################
-# Plugins
-gems:
-  - jekyll-seo-tag
-  - jekyll-paginate
-  - jekyll-gist
-  # - jekyll-mentions
-  # - jemoji
-  # - jekyll-feed
 
-jekyll-mentions:
-    base_url: https://github.com
+# SNS settings
+RSS: false
+# weibo_username:     mushank
+# zhihu_username:     mushank
+github_username:    mushank
+# twitter_username:   mushankkk
+# facebook_username:  mushank
 
-# Files you do not want Jekyll to deal with
-exclude: [README.md]
+
+
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+highlighter: rouge
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+gems: [jekyll-paginate]
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
+
+
+# Disqus settings
+#disqus_username: _your_disqus_short_name_
+
+# Duoshuo settings
+# duoshuo_username: huxblog
+# Share component is depend on Comment so we can NOT use share only.
+# duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+
+
+
+# Analytics settings
+# Baidu Analytics 
+# ba_track_id: [your track id]
+
+# Google Analytics
+# ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+# ga_domain: huangxuan.me
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "写写代码，看看人生<br>离开世界之前，一切皆是修行"
+sidebar-avatar: /img/avatar-jack.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Friends
+friends: [
+    {
+        title: "ojbc.io",
+        href: "https://www.objc.io/"
+    },{
+        title: "objccn,io",
+        href: "https://objccn.io/"
+    },{
+        title: "OneV's Den",
+        href: "https://onevcat.com/"
+    },{
+        title: "Casa Taloyum",
+        href: "http://casatwy.com/"
+    },{
+        title: "唐巧的技术博客",
+        href: "http://blog.devtang.com/"
+    },{
+        title: "Kevin",
+        href: "http://blog.zhowkev.in/"
+    },{
+        title: "sunnyxx的技术博客",
+        href: "http://blog.sunnyxx.com/"
+    },{
+        title: "Draveness",
+        href: "http://draveness.me/"
+    },{
+        title: "刘坤的技术博客",
+        href: "https://blog.cnbluebox.com/"
+    }
+]

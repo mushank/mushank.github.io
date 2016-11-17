@@ -1,46 +1,22 @@
----
-layout: compress
----
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
-    <meta charset="utf-8">
-    <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
-    <meta name=viewport content="width=device-width, initial-scale=1">
-    
-    <meta name=author content="{{ site.name }}">
-    <meta name=description content="{{ site.bio }}">
+{% include head.html %}
 
-    {% seo %}
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
 
-    {% include favicon.html %}
+    {% include nav.html %}
 
-    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}{{ "/feed.xml" }}" />
+    {{ content }}
 
-    <style>{% include main.css %}</style>
-</head>
-<body>
-    <div class="wrapper-{% if site.width == "normal" %}normal{% elsif site.width == "large" %}large{% endif %}">
-        {% if page.tag %}
-            <div class="post">
-        {% else %}
-            {% if page.title == "About" or page.title == "404" %}
-                <div class="page {{ page.title | downcase }}">
-            {% else %}
-                <div class="{{ page.title | downcase }}">
-            {% endif %}
-        {% endif %}
+    {% include footer.html %}
 
-            {{ content }}
-        </div>
-    </div>
 
-    {% include icons.html %}
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
 
-    {% if site.analytics-google %}
-        {% include analytics-google.html %}
-    {% endif %}
 </body>
+
 </html>

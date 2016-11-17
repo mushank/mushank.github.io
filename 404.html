@@ -1,8 +1,25 @@
 ---
-title: "404"
-permalink: /404
-layout: page
+layout: default
+description: "你来到了没有知识的荒原 :("
+header-img: "img/404-bg.jpg"
+permalink: /404.html
 ---
-<h2>404</h2>
-<p>There doesn't appear to be anything here. Sorry about that.</p>
-<p>If you've followed a link expecting something to be here, you can <a href="mailto:{{ site.email }}?subject=Page%20not%20found">contact me</a>.</p>
+
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+				<div class="site-heading" id="tag-heading">
+					<h1>404</h1>
+					<span class="subheading">{{ page.description }}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<script>
+	document.body.classList.add('page-fullscreen');
+</script>
