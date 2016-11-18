@@ -34,7 +34,7 @@ header-img: "img/post-img/post-bg-ios.jpg"
 ##### ItunesConnect
 
 - ItunesConnect: 1024px
- 
+
 ## Summary
 
 - **iPhone**: 58px, 80px, 87px, 120px, 180px  

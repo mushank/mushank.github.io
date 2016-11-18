@@ -4,7 +4,7 @@ title: "C++ / STL / Vector容器实现词频统计与排序"
 subtitle: ""
 author: "Jack"
 date: 2011-12-10
-tag: [PAT, C++]
+tag: [PAT, C++, STL, Vector]
 header-img: "img/post-img/post-bg-unix.jpg"
 ---
 

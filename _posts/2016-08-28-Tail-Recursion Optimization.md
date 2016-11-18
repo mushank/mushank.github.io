@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "关于尾递归优化"
+title: "Tail-Recursion Optimization"
 subtitle: ""
 author: "Jack"
 date: 2016-08-28
-tag: [PAT, Python]
+tag: [PAT, Tail-Recursion, Python]
 header-img: "img/post-img/post-bg-unix.jpg"
 ---
 

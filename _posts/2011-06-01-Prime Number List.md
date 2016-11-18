@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "C语言构造素数表"
+title: "Prime Number List"
 subtitle: ""
 author: "Jack"
 date: 2011-06-01

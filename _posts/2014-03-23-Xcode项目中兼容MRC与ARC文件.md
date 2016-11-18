@@ -4,7 +4,7 @@ title: "Xcode项目中兼容MRC与ARC文件"
 subtitle: ""
 author: "Jack"
 date: 2014-03-23
-tag: [iOS, Xcode]
+tag: [iOS, Xcode, ARC, MRC]
 header-img: "img/post-img/post-bg-ios.jpg"
 ---
 

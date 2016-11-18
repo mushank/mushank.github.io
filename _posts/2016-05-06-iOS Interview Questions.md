@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "iOS面试题精选"
+title: "iOS Interview Questions"
 subtitle: ""
 author: "Jack"
 date: 2016-05-06
-tag: [iOS]
+tag: [iOS, Interview]
 header-img: "img/post-img/post-bg-ios.jpg"
 ---
 
