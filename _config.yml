@@ -47,7 +47,7 @@ kramdown:
 
 
 # Disqus settings
-#disqus_username: _your_disqus_short_name_
+disqus_username: mushank
 
 # Duoshuo settings
 # duoshuo_username: huxblog
@@ -61,8 +61,8 @@ kramdown:
 # ba_track_id: [your track id]
 
 # Google Analytics
-# ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-# ga_domain: huangxuan.me
+ga_track_id: 'UA-87707150-1'            # Format: UA-xxxxxx-xx
+# ga_domain: mushank.com
 
 
 
