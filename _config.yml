@@ -47,7 +47,7 @@ kramdown:
 
 
 # Disqus settings
-disqus_username: mushank
+# disqus_username: mushank
 
 # Duoshuo settings
 duoshuo_username: mushank
