@@ -4,7 +4,7 @@ title: "CocoaPods Usage"
 subtitle: ""
 author: "Jack"
 date: 2015-12-14
-tag: [iOS, CocoaPods]
+tag: [iOS, CocoaPods, Usage]
 header-img: "img/post-img/post-bg-ios.jpg"
 ---
 
