@@ -3,7 +3,7 @@ layout: post
 title: "CocoaPods Usage"
 subtitle: ""
 author: "Jack"
-date: 2015-12-14
+date: 2014-04-05
 tag: [iOS, CocoaPods, Usage]
 header-img: "img/post-img/post-bg-ios.jpg"
 ---

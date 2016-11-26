@@ -1,18 +1,20 @@
 ---
 layout: post
 title: "Maximum Subsequence Sum"
-subtitle: ""
+subtitle: "C语言实现"
 author: "Jack"
-date: 2011-06-02
+date: 2010-09-02
 tag: [PAT, C]
 header-img: "img/post-img/post-bg-unix.jpg"
 ---
 
-### 问题描述
+### 一、问题描述
 
 给定N个整数的序列{A1,A2······An}，求f(i,j) = max(连续子序列和)。// 数学公式不会打，只能用语言描述了= =！
 
-### 算法一： 循环遍历
+### 二、代码实现
+
+##### 算法一： 循环遍历
 
 这是最为常见的一种求解方式，采用循环遍历的方式求出最大连续子列和，T(n) = O(n^2)
 
@@ -34,7 +36,7 @@ int maxSubSeqSum(int A[], int N){
 }
 ```
 
-### 算法二：分而治之
+##### 算法二：分而治之
 
 采用分治的思想，通过递归进行求解，T(n) = O(n*Logn)
 
@@ -73,9 +75,7 @@ int maxSubSeqSum(int A[], int leftIndex, int rightIndex){
 }
 ```
 
-
-
-### 算法三：在线处理
+##### 算法三：在线处理
 
 这是效率最高的问题求解方式，T(n) = O(n)
 

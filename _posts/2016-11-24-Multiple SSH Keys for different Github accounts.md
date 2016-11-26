@@ -5,7 +5,7 @@ subtitle: ""
 author: "Jack"
 date: 2016-11-24
 tag: [Git, Usage, Github]
-header-img: "img/post-img/post-bg-utils.jpg"
+header-img: "img/post-img/post-bg-unix.jpg"
 ---
 
 

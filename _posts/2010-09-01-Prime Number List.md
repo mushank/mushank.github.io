@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "Prime Number List"
-subtitle: ""
+subtitle: "C语言实现"
 author: "Jack"
-date: 2011-06-01
+date: 2010-09-01
 tag: [PAT, C]
 header-img: "img/post-img/post-bg-unix.jpg"
 ---
 
-## 一、分析
+## 一、问题描述
 欲构造n以内（不含n）的素数表，分析如下：
 
 1. 令x为2；
