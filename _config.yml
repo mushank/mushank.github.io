@@ -1,6 +1,6 @@
 # Site settings
 title: Mushank
-SEOTitle: Mushank | Jack's Blog
+SEOTitle: Mushank(Jack)
 header-img: img/home-bg.jpg
 email: mushank@Gmail.com
 description: "关于移动开发与设计、生活与艺术 | Mushank, Mobile Dev & Design, Life & Art | 这里是 @Jack 的个人博客，与你一起发现更大的世界。"
@@ -23,7 +23,8 @@ github_username:    mushank
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
-permalink: pretty
+# permalink: pretty
+permalink: ./post/:title
 paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
