@@ -22,21 +22,15 @@
 20. Login/Root/Launch三个View的架构安排
 21. iOS Nav Bar背景图设置问题
 22. IQKeyboard 关于textfield代理的问题，同一view上的三个tx，点击一个会触发三个的代理事件
-23. Copy修饰符，NSString/NSArray/NSDictionary及其可变类型的深浅复制
-24. dsym文件分析crash log
-25. Unicode字符转中文
-26. keychain
-27. NSKeyedArchiver/NSKeyedUnarchiver
-28. URLSchemes
-29. CGColor ｜ CGColorRef ｜  typedef struct CGColor *CGColorRef;不理解此句
-30. 牛顿法 深入
-31. CATransform3DMakeRotation
-32. [str isKindOfClass:[NSMutableString class]] 为YES，探讨iOS类簇相关
-
-### 封装
-
-1. iOS 日历选择控件
-2. iOS Push输入控件
+23. dsym文件分析crash log
+24. Unicode字符转中文
+25. keychain
+26. NSKeyedArchiver/NSKeyedUnarchiver
+27. URLSchemes
+28. CGColor ｜ CGColorRef ｜  typedef struct CGColor *CGColorRef;不理解此句
+29. 牛顿法 深入
+30. CATransform3DMakeRotation
+31. [str isKindOfClass:[NSMutableString class]] 为YES，探讨iOS类簇相关
 
 ### 经验
 
