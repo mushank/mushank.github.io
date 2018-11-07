@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "iOS开发 Xcode项目兼容MRC与ARC文件"
+title: "iOS开发｜Xcode项目兼容MRC与ARC文件"
 subtitle: ""
 author: "Jack"
 date: 2014-04-08

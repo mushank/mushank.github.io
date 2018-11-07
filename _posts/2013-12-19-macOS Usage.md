@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "OS X Usage"
+title: "macOS Usage"
 subtitle: ""
 author: "Jack"
-date: 2014-02-19
-tag: [OS X, Usage]
+date: 2013-12-19
+tag: [macOS, Usage]
 header-img: "img/post-img/post-bg-ios.jpg"
 ---
 

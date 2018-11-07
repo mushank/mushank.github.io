@@ -3,7 +3,7 @@ layout: post
 title: "Tail-Recursion Optimization"
 subtitle: "采用Python代码进行演示，但其本身不支持尾递归优化"
 author: "Jack"
-date: 2013-08-28
+date: 2010-09-03
 tag: [PAT, Tail-Recursion, Python]
 header-img: "img/post-img/post-bg-unix.jpg"
 ---
