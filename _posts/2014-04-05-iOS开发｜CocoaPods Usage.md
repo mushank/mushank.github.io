@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "2014-04-05-iOS开发｜CocoaPods Usage"
+title: "iOS开发｜CocoaPods Usage"
 subtitle: ""
 author: "Jack"
 date: 2014-04-05
