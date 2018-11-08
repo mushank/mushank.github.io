@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Python｜学习笔记（零）- 简介"
+title: "Python｜学习笔记（零）- Python简介"
 subtitle: "Python学习笔记系列"
 author: "Jack"
 date: 2015-01-01
 tag: [Python]
-header-img: "img/post-img/post-bg-universe.jpg"
+header-img: "img/post-img/post-bg-unix.jpg"
 ---
 
 
