@@ -8,6 +8,10 @@ tag: [Python]
 header-img: "img/post-img/post-bg-unix.jpg"
 ---
 
+### 前言
+
+>  本篇是Python学习笔记系列的第（一）篇，主要介绍了如何安装运行Python，以及如何编码运行第一个Python程序。
+
 ### 安装Python
 
 Python是跨平台的，可以运行在Windows、Mac以及各种Linux/Unix系统上。在Mac上写的Python程序，放到Windows上也是能够运行的。
