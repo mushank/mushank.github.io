@@ -82,7 +82,3 @@ $ chmod a+x hello.py
 ### 总结
 
 Python跨平台的特性非常适合用来编写脚本程序，当然Python的作用远不止于此，随着学习的深入，你会对Python越发爱不释手！
-
----
-
-参考源码：[hello.py](https://github.com/mushank/Python-Learning/blob/master/hello.py)
