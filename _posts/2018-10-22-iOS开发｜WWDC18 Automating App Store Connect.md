@@ -4,7 +4,7 @@ title: "iOS开发｜WWDC18 Automating App Store Connect"
 subtitle: "WWDC18 - App Store Connect API"
 author: "Jack"
 date: 2018-10-21
-tag: [iOS, App Store Connect API]
+tag: [iOS, WWDC18, App Store Connect API]
 header-img: "img/post-img/post-bg-ios.jpg"
 ---
 
