@@ -92,22 +92,7 @@ friends: [
         title: "OneV's Den",
         href: "https://onevcat.com/"
     },{
-        title: "Casa Taloyum",
-        href: "http://casatwy.com/"
-    },{
-        title: "唐巧的技术博客",
-        href: "http://blog.devtang.com/"
-    },{
-        title: "Kevin",
-        href: "http://blog.zhowkev.in/"
-    },{
-        title: "sunnyxx的技术博客",
+        title: "sunnyxx",
         href: "http://blog.sunnyxx.com/"
-    },{
-        title: "Draveness",
-        href: "http://draveness.me/"
-    },{
-        title: "刘坤的技术博客",
-        href: "https://blog.cnbluebox.com/"
     }
 ]
