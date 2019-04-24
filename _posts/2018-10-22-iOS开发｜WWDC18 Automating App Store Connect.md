@@ -50,17 +50,18 @@ header-img: "img/post-img/post-bg-ios.jpg"
 
 - 获取数据（获取源：GET）
 
-```
-// 举例：获取用户信息
+```ruby
+# 举例：获取用户信息
 
-// 1. API基地址
+# 1. API基地址
 api.appstoreconnect.apple.com
 
-// 2. 添加API版本号（当前为v1）
+# 2. 添加API版本号（当前为v1）
 api.appstoreconnect.apple.com/v1
 
-// 3. 添加源类型名称（resource type name，以user来举例）
-> GET api.appstoreconnect.apple.com/v1/users // 代表团队中的所有用户，返回一个JSON对象
+# 3. 添加源类型名称（resource type name，以user来举例）
+# 代表团队中的所有用户，返回一个JSON对象
+> GET api.appstoreconnect.apple.com/v1/users 
 
 HTTP/1.1 200 OK
 {
@@ -82,15 +83,15 @@ HTTP/1.1 200 OK
         ...
     }]
 }
-// 其中links字段内的self字段，标示当前用户数据的地址（即：源），可通过该源获取该用户的数据。
+# 其中links字段内的self字段，标示当前用户数据的地址（即：源），可通过该源获取该用户的数据。
 ```
 
 - 更新数据（创建源：POST，更新源：PATCH，删除源：DELETE）
 
 ```
-// 举例：添加一个新用户
+# 举例：添加一个新用户
 
-// 首先创建一个邀请源
+# 首先创建一个邀请源
 > POST /v1/userInvitations
 {
     "data": {
@@ -124,9 +125,9 @@ HTTP/1.1 201 CREATED
     }
 }
 
-// 举例：更新一个用户，添加市场职能
+# 举例：更新一个用户，添加市场职能
 
-// 修改源自属性
+# 修改源自属性
 > PATCH /vi/users/24cbd794-94a3-c7b0-1051
 {
     "data": {
@@ -156,44 +157,44 @@ HTTP/1.1 200 OK
     }
 }
 
-// 举例：删除一个用户
+# 举例：删除一个用户
 > DELETE /vi/users/24cbd794-94a3-c7b0-1051
 HTTP/1.1 204 NO CONTENT
 ```
 
 **示例场景：某位员工离职，需要删除该用户**
 
-```
-// 通过GET请求访问用户源（users），获取全部用户
+```ruby
+# 通过GET请求访问用户源（users），获取全部用户
 GET /v1/users
 ...
 
-// 通过邮箱筛选该离职用户
+# 通过邮箱筛选该离职用户
 GET /v1/users?filter[email]=john-appleseed@apple.com
 ...
 
-// 使用该用户ID获取用户实例（返回用户实例，并附带ID）
+# 使用该用户ID获取用户实例（返回用户实例，并附带ID）
 GET /v1/users/24cbd794-94a3-c7b0-1051
 ...
 
-// 删除用户
+# 删除用户
 DELETE /v1/user/24cbd794-94a3-c7b0-1051
 HTTP/1.1 204 NO CONTENT
 
-// 验证是否被删除，继续向该用户源发送GET请求
+# 验证是否被删除，继续向该用户源发送GET请求
 GET /v1/users/24cbd794-94a3-c7b0-1051
 HTTP/1.1 404 NOT FOUND
 ```
 
 - 各API之间的关系（如何协同合作）
 
-```
-BetaGroups // 测试小组
-BetaTesters // 测试人员
+```ruby
+BetaGroups # 测试小组
+BetaTesters # 测试人员
 
-// 举例：将测试人员加入测试小组
+# 举例：将测试人员加入测试小组
 
-// 获取所有测试小组
+# 获取所有测试小组
 > GET /v1/betaGroups
 HTTP/1.1 200 OK
 {
@@ -205,8 +206,10 @@ HTTP/1.1 200 OK
             "app": {...},
             "betaTesters": {
                 "links": {
-                    "self": "/v1/betaGroups/55555555-1111-2323-1231/relationships/betaTesters", // ⚠️：关系自链接，增加关系时被使用
-                    "related": "/v1/betaGroups/55555555-1111-2323-1231/beteTesters" // ⚠️：相关链接，实际相关数据
+                    # ⚠️：关系自链接，增加关系时被使用
+                    "self": "/v1/betaGroups/55555555-1111-2323-1231/relationships/betaTesters", 
+                    # ⚠️：相关链接，实际相关数据
+                    "related": "/v1/betaGroups/55555555-1111-2323-1231/beteTesters" 
                 }
             },
             "builds": {...}
@@ -220,7 +223,7 @@ HTTP/1.1 200 OK
     }]
 }
 
-// 添加关系（⚠️：使用关系自链接）
+# 添加关系（⚠️：使用关系自链接）
 > POST /v1/betaGroups/55555555-1111-2323-1231/relationships/betaTesters
 {
     "data": [
@@ -235,35 +238,38 @@ HTTP/1.1 200 OK
     ]
 }
 
-// 查看实际关联数据，此处指本测试小组内关联的测试人员（⚠️：使用相关链接）
+# 查看实际关联数据，此处指本测试小组内关联的测试人员（⚠️：使用相关链接）
 > GET /v1/betaGroups/55555555-1111-2323-1231/betaTesters
 ...
 
 
-// 举例：批量获取不同小组中的测试人员
+# 举例：批量获取不同小组中的测试人员
 
-// 使用包含参数（include）
+# 使用包含参数（include）
 > GET v1/betaGroups?include=betaTesters
 ...
-// 此处返回的betaTesters字段中含有data字段，包含小组内测试人员信息
-// respose底部有include字段部分（与最外层data字段平级），包含所有测试人员的详细信息（将测试人员的详细信息单独放于一个地方是处于节约数据传输）
+# 此处返回的betaTesters字段中含有data字段，包含小组内测试人员信息
+# respose底部有include字段部分（与最外层data字段平级），包含所有测试人员的详细信息（将测试人员的详细信息单独放于一个地方是处于节约数据传输）
 ```
 
 **示例场景**
 
-```
-// 添加测试小组
+```ruby
+# 添加测试小组
 POST /v1/betaGroups
 {
 	"data": "betaGroups",
 	"attributes": {
-        "name": "Test Group", // 创建测试小组时所需名称信息
-	}
-	“relationships": { // 如果不加relationships进行post请求，返回 HTTP/1.1 409 CONFLICT
+        # 创建测试小组时所需名称信息
+        "name": "Test Group"
+	},
+    # 如果不加relationships进行post请求，返回 HTTP/1.1 409 CONFLICT
+	"relationships": { 
         "app": {
             "data": {
                 "type": "apps",
-                "id": "1002020023" // 创建测试小组，并且关联到id为1002020023的app
+                # 创建测试小组，并且关联到id为1002020023的app
+                "id": "1002020023" 
             }
         }
 	}
@@ -283,14 +289,15 @@ HTTP/1.1 201 CREATED
     }
 }
 
-// 修改小组信息
+# 修改小组信息
 PATCH /v1/betaGroups/asdjfajwer-aefa-adfa-rqer
 {
     "data": {
 		"type": "betaGroups",
 		"id": "asdjfajwer-aefa-adfa-rqer",
 		"attribute": {
-            "name": "WWDC Group" // 需要修改的名称
+            # 需要修改的名称
+            "name": "WWDC Group" 
 		}
     }
 }
@@ -300,7 +307,7 @@ HTTP/1.1 200 OK
 	...
 }
 
-// 添加测试人员
+# 添加测试人员
 POST v1/betaTester
 {
     "data": "betaTester",
@@ -326,31 +333,33 @@ HTTP/1.1 201 CREATED
     ...
 }
 
-// 查看测试小组中的测试人员
+# 查看测试小组中的测试人员
 GET /v1/betaGroups/asdjfajwer-aefa-adfa-rqer/betaTesters
 HTTP/1.1 200 OK
 
-// 筛选查看字段，指定查看emai
+# 筛选查看字段，指定查看emai
 GET /v1/betaGroups/asdjfajwer-aefa-adfa-rqer/betaTesters?fields[betaTesters]=email
 HTTP/1.1 200 OK
 ```
 
 - 处理错误
 
-```
-> GET /v1/betaTesters?filter[emaill]=kate-bell%22apple.com
+```ruby
+> GET /v1/betaTesters?filter[emaill]=kate-bell%22mac.com
 HTTP/1.1 400 Bad Request
 {
     "errors": [
         {
             "status": "400",
-            "id": "hjksajhlhjlqer-1njsadjl-asdjnfasdfh", // error的唯一标示，可反馈给Apple进行定位
-            "title": "...",
-            "detail": "...",
-            "code": "PARAMETER_ERROR.INVALID", // 程序错误处理使用该code属性，稳定的错误字符串
-			"source": {
-                ...
-			}
+			# error的唯一标示，可反馈给Apple进行定位
+            "id": "5becf2db-2f12-4d6a-9dc2-6ceb33c683b4",
+            "title": "A parameter has an invalid value",
+            "detail": "'emaill' is not a valid filter type",
+            # 程序错误处理使用该code属性，稳定的错误字符串
+            "code": "PARAMETER_ERROR.INVALID",
+            "source": {
+                "parameter": "filter[emaill]"
+             }
         }
     ]
 }
@@ -372,20 +381,20 @@ JWT提供了实现该令牌算法的函数库，Ruby举例：
 require 'base64'
 require 'jwt'
 
-ISSUER_ID = "" // 复制你的ISSUER_ID到此处
-KEY_ID = "" // 复制你的KEY_ID到此处
+ISSUER_ID = "" # 复制你的ISSUER_ID到此处
+KEY_ID = "" # 复制你的KEY_ID到此处
 private_key = OpenSSL::PKey.read(File.read("/Users/demo/Downloads/AuthKey_#(KEY_ID).p8"))
 
 token = JWT.encode {
     {
-        iss: ISSUER_ID, // found on API Keys tab
-        exp: Time.now.ti_i + 20 * 24, // up to 20 minutes in the future
-        aud: "appstoreconnect-v1" // 常量
+        iss: ISSUER_ID, # found on API Keys tab
+        exp: Time.now.ti_i + 20 * 24, # up to 20 minutes in the future
+        aud: "appstoreconnect-v1" # 常量
     },
     private_key,
     "ES256",
-    header_fields={
-        kid: KEY_ID // found on API Keys tab
+    header_fields= {
+        kid: KEY_ID # found on API Keys tab
     }
 }
 
@@ -394,8 +403,8 @@ puts token
 
 3. 请求中携带Token
 
-```
-// 放入Header "Authorization: Bearer <token_value>"
+```ruby
+# 放入Header "Authorization: Bearer <token_value>"
 $ curl  https://api.appstoreconnect.apple.com/v1/users --Header "Authorization: Bearer lOOOOOOOOOOOONG_GENERATED_TOKEN"
 ```
 
